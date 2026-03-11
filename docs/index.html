@@ -3,8 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>RSS Pick · 内容推荐</title>
-  <meta name="description" content="FreshRSS 内容推荐（公开版）" />
+
+  <title>RSS内容推荐</title>
+  <meta name="description" content="公开版 RSS 内容推荐（增量更新）。每期包含标题、来源、链接、摘要与上榜理由。" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="RSS内容推荐" />
+  <meta property="og:description" content="公开版 RSS 内容推荐（增量更新）。" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="RSS内容推荐" />
+  <meta name="twitter:description" content="公开版 RSS 内容推荐（增量更新）。" />
+
+  <script type="application/ld+json" id="ldjson">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "RSS内容推荐",
+    "description": "公开版 RSS 内容推荐（增量更新）。"
+  }
+  </script>
+
   <style>
     :root{
       --bg:#f6f1e6;
@@ -29,37 +51,43 @@
     }
     a{color:inherit}
 
-    /* Full-width but comfortable */
-    .wrap{max-width:1280px;margin:0 auto;padding:22px 16px 44px}
+    .wrap{max-width:1320px;margin:0 auto;padding:16px 14px 44px}
 
-    header{
+    /* Main page block (no masthead/header area as requested) */
+    main{
       background:var(--paper);
       border:1px solid var(--rule);
       border-radius:14px;
-      padding:16px 18px 14px;
+      padding:18px;
       box-shadow:0 10px 22px rgba(0,0,0,.04);
     }
 
-    .mast{
+    .topline{
       display:flex;
-      align-items:flex-end;
+      align-items:baseline;
       justify-content:space-between;
-      gap:14px;
+      gap:12px;
       flex-wrap:wrap;
+      padding-bottom:12px;
+      border-bottom:1px solid var(--rule);
+      margin-bottom:14px;
     }
 
-    .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-    h1{margin:2px 0 0;font-family:var(--serif);font-size:46px;line-height:1.02}
-    .sub{margin-top:8px;font-size:14px;line-height:1.55;color:var(--muted)}
+    .edition{
+      font-family:var(--serif);
+      font-size:26px;
+      line-height:1.12;
+      margin:0;
+    }
 
     .meta{
       display:flex;
       gap:10px;
       align-items:center;
-      justify-content:flex-end;
       flex-wrap:wrap;
-      margin-top:6px;
+      justify-content:flex-end;
     }
+
     .chip{
       font-size:12px;
       color:var(--muted);
@@ -69,6 +97,7 @@
       padding:6px 10px;
       white-space:nowrap;
     }
+
     .badge{
       font-family:var(--mono);
       font-size:12px;
@@ -81,49 +110,26 @@
     .badge.warn{color:var(--warn);border-color:rgba(138,90,0,.35)}
     .badge.bad{color:var(--bad);border-color:rgba(155,28,28,.35)}
 
-    .rule{height:1px;background:var(--rule);margin:18px 0}
-
-    main{
-      margin-top:18px;
-      background:var(--paper);
-      border:1px solid var(--rule);
-      border-radius:14px;
-      padding:18px;
-      box-shadow:0 10px 22px rgba(0,0,0,.04);
-    }
-
-    .headline{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-bottom:10px;
-    }
-    .headline h2{margin:0;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-
     /* Newspaper columns */
     .columns{
       column-count: 3;
-      column-gap: 28px;
+      column-gap: 30px;
       column-rule: 1px solid var(--rule);
     }
-    @media (max-width: 1100px){
+    @media (max-width: 1120px){
       .columns{column-count:2}
     }
-    @media (max-width: 720px){
+    @media (max-width: 760px){
       .columns{column-count:1; column-rule:none}
-      h1{font-size:36px}
-      .wrap{padding:14px 12px 28px}
-      header,main{border-radius:12px}
-      .title{font-size:19px}
-      .summary,.reason{font-size:14px}
+      .wrap{padding:12px 10px 28px}
+      main{border-radius:12px;padding:14px}
+      .edition{font-size:22px}
     }
 
     .item{
       break-inside: avoid;
-      padding:0 0 14px;
-      margin:0 0 14px;
+      padding:0 0 16px;
+      margin:0 0 16px;
       border-bottom:1px solid var(--rule);
     }
 
@@ -131,7 +137,7 @@
       margin:0;
       font-family:var(--serif);
       font-size:20px;
-      line-height:1.32;
+      line-height:1.35;
     }
     .title a{
       text-decoration:none;
@@ -139,42 +145,36 @@
     }
     .title a:hover{border-bottom-color:rgba(0,0,0,.45)}
 
-    .byline{margin-top:7px;font-size:13px;color:var(--muted)}
-    .summary{margin-top:9px;font-size:14px;line-height:1.7;color:var(--muted)}
-    .reason{margin-top:9px;font-size:14px;line-height:1.72}
+    .byline{margin-top:8px;font-size:13px;color:var(--muted)}
+    .stamp{margin-top:6px;font-size:12px;color:var(--muted)}
+    .summary{margin-top:10px;font-size:14px;line-height:1.72;color:var(--muted)}
+    .reason{margin-top:10px;font-size:14px;line-height:1.74}
 
     footer{
-      margin-top:14px;
+      margin-top:16px;
       font-size:12px;
       color:var(--muted);
+      border-top:1px solid var(--rule);
+      padding-top:12px;
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <div class="mast">
-        <div>
-          <div class="kicker">RSS PICK · EDITION</div>
-          <h1>内容推荐</h1>
-          <div class="sub" id="subtitle">加载中…</div>
-        </div>
+    <main>
+      <div class="topline">
+        <h1 class="edition" id="editionTitle">RSS内容推荐</h1>
         <div class="meta">
           <div class="chip" id="updated">更新时间：—</div>
           <div class="badge" id="status">—</div>
+          <div class="chip" id="issue">issue：—</div>
         </div>
       </div>
-    </header>
 
-    <main>
-      <div class="headline">
-        <h2 id="editionTitle">本期</h2>
-        <div class="chip" id="issue">issue：—</div>
-      </div>
-      <div class="rule"></div>
       <section class="columns" id="items"></section>
+
       <footer>
-        公开版说明：已启用过滤规则，仅展示“内容推荐”。
+        公开版：仅展示“内容推荐”（增量更新）。
       </footer>
     </main>
   </div>
@@ -211,8 +211,7 @@
         if(!res.ok) throw new Error('HTTP ' + res.status);
         data = await res.json();
       } catch(e){
-        document.getElementById('subtitle').textContent = '无法加载 results.json';
-        document.getElementById('items').innerHTML = '<div>请检查是否已开启 GitHub Pages（main /docs）。</div>';
+        document.getElementById('items').innerHTML = '<div>无法加载 results.json。请检查 GitHub Pages（main /docs）是否开启。</div>';
         return;
       }
 
@@ -222,27 +221,40 @@
         .sort((a,b)=> (b.ts||'').localeCompare(a.ts||''));
       const latest = runs[0];
 
-      document.getElementById('subtitle').textContent = data?.meta?.subtitle || '内容推荐 · 公开版';
-      document.getElementById('updated').textContent = '更新时间：' + fmtTime(data?.meta?.updated_at || latest?.ts);
-
       const st = (latest?.status || data?.meta?.overall_status || 'ok');
       const sEl = document.getElementById('status');
       sEl.className = 'badge ' + badgeClass(st);
       sEl.textContent = statusLabel(st);
 
+      const updatedAt = data?.meta?.updated_at || latest?.ts;
+      document.getElementById('updated').textContent = '更新时间：' + fmtTime(updatedAt);
       document.getElementById('issue').textContent = 'issue：' + (latest?.ts ? latest.ts.slice(0,19) : '—');
-      document.getElementById('editionTitle').textContent = latest?.edition?.title || '本期';
+      document.getElementById('editionTitle').textContent = latest?.edition?.title || 'RSS内容推荐';
+
+      // JSON-LD update
+      const ld = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": (latest?.edition?.title || 'RSS内容推荐'),
+        "description": data?.meta?.subtitle || "公开版 RSS 内容推荐（增量更新）。",
+        "dateModified": updatedAt || undefined
+      };
+      try { document.getElementById('ldjson').textContent = JSON.stringify(ld, null, 2); } catch {}
 
       const itemsEl = document.getElementById('items');
       const items = latest?.edition?.items || [];
-      itemsEl.innerHTML = items.map(it => `\
+      itemsEl.innerHTML = items.map(it => {
+        const rec = it.recommended_at || latest?.ts;
+        return `\
         <article class=\"item\">\
-          <h3 class=\"title\"><a href=\"${escapeAttr(it.link)}\" target=\"_blank\" rel=\"noreferrer\">${escapeHtml(it.title || '—')}</a></h3>\
+          <h2 class=\"title\"><a href=\"${escapeAttr(it.link)}\" target=\"_blank\" rel=\"noreferrer\">${escapeHtml(it.title || '—')}</a></h2>\
           <div class=\"byline\">${escapeHtml(it.source || '—')}</div>\
+          <div class=\"stamp\">推荐时间：${escapeHtml(fmtTime(rec))}</div>\
           ${it.summary ? `<div class=\"summary\">${escapeHtml(it.summary)}</div>` : ''}\
           ${it.reason ? `<div class=\"reason\"><b>上榜理由：</b>${escapeHtml(it.reason)}</div>` : ''}\
         </article>\
-      `).join('');
+      `;
+      }).join('');
     }
 
     main();
