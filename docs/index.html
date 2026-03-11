@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RSS Pick · 内容推荐</title>
+  <meta name="description" content="FreshRSS 内容推荐（公开版）" />
+  <style>
+    :root{
+      --bg:#f6f1e6;
+      --paper:#fffdf8;
+      --ink:#111;
+      --muted:#555;
+      --rule:#d8d2c6;
+      --ok:#0b6b3a;
+      --warn:#8a5a00;
+      --bad:#9b1c1c;
+      --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--ink);
+      background:radial-gradient(1200px 600px at 60% 0%, #fff 0%, var(--bg) 60%), linear-gradient(180deg, var(--bg), #f1ecdf);
+    }
+    a{color:inherit}
+
+    /* Full-width but comfortable */
+    .wrap{max-width:1280px;margin:0 auto;padding:22px 16px 44px}
+
+    header{
+      background:var(--paper);
+      border:1px solid var(--rule);
+      border-radius:14px;
+      padding:16px 18px 14px;
+      box-shadow:0 10px 22px rgba(0,0,0,.04);
+    }
+
+    .mast{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+    h1{margin:2px 0 0;font-family:var(--serif);font-size:46px;line-height:1.02}
+    .sub{margin-top:8px;font-size:14px;line-height:1.55;color:var(--muted)}
+
+    .meta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:flex-end;
+      flex-wrap:wrap;
+      margin-top:6px;
+    }
+    .chip{
+      font-size:12px;
+      color:var(--muted);
+      border:1px solid var(--rule);
+      background:#fff;
+      border-radius:999px;
+      padding:6px 10px;
+      white-space:nowrap;
+    }
+    .badge{
+      font-family:var(--mono);
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,.12);
+      background:#fff;
+    }
+    .badge.ok{color:var(--ok);border-color:rgba(11,107,58,.35)}
+    .badge.warn{color:var(--warn);border-color:rgba(138,90,0,.35)}
+    .badge.bad{color:var(--bad);border-color:rgba(155,28,28,.35)}
+
+    .rule{height:1px;background:var(--rule);margin:18px 0}
+
+    main{
+      margin-top:18px;
+      background:var(--paper);
+      border:1px solid var(--rule);
+      border-radius:14px;
+      padding:18px;
+      box-shadow:0 10px 22px rgba(0,0,0,.04);
+    }
+
+    .headline{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+    .headline h2{margin:0;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+    /* Newspaper columns */
+    .columns{
+      column-count: 3;
+      column-gap: 28px;
+      column-rule: 1px solid var(--rule);
+    }
+    @media (max-width: 1100px){
+      .columns{column-count:2}
+    }
+    @media (max-width: 720px){
+      .columns{column-count:1; column-rule:none}
+      h1{font-size:36px}
+      .wrap{padding:14px 12px 28px}
+      header,main{border-radius:12px}
+      .title{font-size:19px}
+      .summary,.reason{font-size:14px}
+    }
+
+    .item{
+      break-inside: avoid;
+      padding:0 0 14px;
+      margin:0 0 14px;
+      border-bottom:1px solid var(--rule);
+    }
+
+    .title{
+      margin:0;
+      font-family:var(--serif);
+      font-size:20px;
+      line-height:1.32;
+    }
+    .title a{
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.18);
+    }
+    .title a:hover{border-bottom-color:rgba(0,0,0,.45)}
+
+    .byline{margin-top:7px;font-size:13px;color:var(--muted)}
+    .summary{margin-top:9px;font-size:14px;line-height:1.7;color:var(--muted)}
+    .reason{margin-top:9px;font-size:14px;line-height:1.72}
+
+    footer{
+      margin-top:14px;
+      font-size:12px;
+      color:var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="mast">
+        <div>
+          <div class="kicker">RSS PICK · EDITION</div>
+          <h1>内容推荐</h1>
+          <div class="sub" id="subtitle">加载中…</div>
+        </div>
+        <div class="meta">
+          <div class="chip" id="updated">更新时间：—</div>
+          <div class="badge" id="status">—</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="headline">
+        <h2 id="editionTitle">本期</h2>
+        <div class="chip" id="issue">issue：—</div>
+      </div>
+      <div class="rule"></div>
+      <section class="columns" id="items"></section>
+      <footer>
+        公开版说明：已启用过滤规则，仅展示“内容推荐”。
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    function fmtTime(iso){
+      if(!iso) return '—';
+      const d = new Date(iso);
+      return d.toLocaleString('zh-CN', {hour12:false});
+    }
+    function badgeClass(status){
+      if(status === 'ok') return 'ok';
+      if(status === 'warn') return 'warn';
+      return 'bad';
+    }
+    function statusLabel(status){
+      if(status === 'ok') return 'OK';
+      if(status === 'warn') return 'WARN';
+      return 'FAIL';
+    }
+    function escapeHtml(s){
+      return String(s).replace(/[&<>\"]/g, c=>({
+        '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'
+      }[c]));
+    }
+    function escapeAttr(s){
+      return String(s || '').replace(/[\s\"\'<>]/g, '');
+    }
+
+    async function main(){
+      let data;
+      try{
+        const res = await fetch('./results.json', {cache:'no-store'});
+        if(!res.ok) throw new Error('HTTP ' + res.status);
+        data = await res.json();
+      } catch(e){
+        document.getElementById('subtitle').textContent = '无法加载 results.json';
+        document.getElementById('items').innerHTML = '<div>请检查是否已开启 GitHub Pages（main /docs）。</div>';
+        return;
+      }
+
+      const runs = (data.runs || [])
+        .filter(r => r && r.check === 'freshrss-digest')
+        .slice()
+        .sort((a,b)=> (b.ts||'').localeCompare(a.ts||''));
+      const latest = runs[0];
+
+      document.getElementById('subtitle').textContent = data?.meta?.subtitle || '内容推荐 · 公开版';
+      document.getElementById('updated').textContent = '更新时间：' + fmtTime(data?.meta?.updated_at || latest?.ts);
+
+      const st = (latest?.status || data?.meta?.overall_status || 'ok');
+      const sEl = document.getElementById('status');
+      sEl.className = 'badge ' + badgeClass(st);
+      sEl.textContent = statusLabel(st);
+
+      document.getElementById('issue').textContent = 'issue：' + (latest?.ts ? latest.ts.slice(0,19) : '—');
+      document.getElementById('editionTitle').textContent = latest?.edition?.title || '本期';
+
+      const itemsEl = document.getElementById('items');
+      const items = latest?.edition?.items || [];
+      itemsEl.innerHTML = items.map(it => `\
+        <article class=\"item\">\
+          <h3 class=\"title\"><a href=\"${escapeAttr(it.link)}\" target=\"_blank\" rel=\"noreferrer\">${escapeHtml(it.title || '—')}</a></h3>\
+          <div class=\"byline\">${escapeHtml(it.source || '—')}</div>\
+          ${it.summary ? `<div class=\"summary\">${escapeHtml(it.summary)}</div>` : ''}\
+          ${it.reason ? `<div class=\"reason\"><b>上榜理由：</b>${escapeHtml(it.reason)}</div>` : ''}\
+        </article>\
+      `).join('');
+    }
+
+    main();
+  </script>
+</body>
+</html>
