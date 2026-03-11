@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>RSS内容推荐</title>
+    <link>https://zhhbinn.github.io/rss-pick/</link>
+    <description>公开版 RSS 内容推荐（增量更新）</description>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 11 Mar 2026 04:47:10 GMT</lastBuildDate>
+    <generator>openclaw</generator>
+    
+    <item>
+      <title>Smoke test</title>
+      <link>https://example.com/seo</link>
+      <guid isPermaLink="true">https://example.com/seo</guid>
+      <pubDate>Wed, 11 Mar 2026 04:47:10 GMT</pubDate>
+      <description>来源：Example
+摘要：test
+上榜理由：test</description>
+    </item>
+    <item>
+      <title>Smoke test 2</title>
+      <link>https://example.com/seo2</link>
+      <guid isPermaLink="true">https://example.com/seo2</guid>
+      <pubDate>Wed, 11 Mar 2026 04:47:10 GMT</pubDate>
+      <description>来源：Example
+摘要：test
+上榜理由：test</description>
+    </item>
+    <item>
+      <title>Smoke test 3</title>
+      <link>https://example.com/seo3</link>
+      <guid isPermaLink="true">https://example.com/seo3</guid>
+      <pubDate>Wed, 11 Mar 2026 04:47:10 GMT</pubDate>
+      <description>来源：Example
+摘要：test
+上榜理由：test</description>
+    </item>
+    <item>
+      <title>Smoke test 4</title>
+      <link>https://example.com/seo4</link>
+      <guid isPermaLink="true">https://example.com/seo4</guid>
+      <pubDate>Wed, 11 Mar 2026 04:47:10 GMT</pubDate>
+      <description>来源：Example
+摘要：test
+上榜理由：test</description>
+    </item>
+    <item>
+      <title>Smoke test 5</title>
+      <link>https://example.com/seo5</link>
+      <guid isPermaLink="true">https://example.com/seo5</guid>
+      <pubDate>Wed, 11 Mar 2026 04:47:10 GMT</pubDate>
+      <description>来源：Example
+摘要：test
+上榜理由：test</description>
+    </item>
+  </channel>
+</rss>

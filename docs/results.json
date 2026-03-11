@@ -2,11 +2,62 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-03-11T11:59:53.371+08:00",
+    "updated_at": "2026-03-11T12:47:10.070+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-03-11T12:47:10.070+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：5 条推荐",
+      "edition": {
+        "title": "RSS内容推荐",
+        "items": [
+          {
+            "title": "Smoke test",
+            "source": "Example",
+            "link": "https://example.com/seo",
+            "summary": "test",
+            "reason": "test",
+            "recommended_at": "2026-03-11T12:47:10.070+08:00"
+          },
+          {
+            "title": "Smoke test 2",
+            "source": "Example",
+            "link": "https://example.com/seo2",
+            "summary": "test",
+            "reason": "test",
+            "recommended_at": "2026-03-11T12:47:10.070+08:00"
+          },
+          {
+            "title": "Smoke test 3",
+            "source": "Example",
+            "link": "https://example.com/seo3",
+            "summary": "test",
+            "reason": "test",
+            "recommended_at": "2026-03-11T12:47:10.070+08:00"
+          },
+          {
+            "title": "Smoke test 4",
+            "source": "Example",
+            "link": "https://example.com/seo4",
+            "summary": "test",
+            "reason": "test",
+            "recommended_at": "2026-03-11T12:47:10.070+08:00"
+          },
+          {
+            "title": "Smoke test 5",
+            "source": "Example",
+            "link": "https://example.com/seo5",
+            "summary": "test",
+            "reason": "test",
+            "recommended_at": "2026-03-11T12:47:10.070+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-03-11T11:59:53.371+08:00",
       "check": "freshrss-digest",
