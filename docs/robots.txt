@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zhhbinn.github.io/rss-pick/sitemap.xml
