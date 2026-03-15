@@ -5,62 +5,71 @@
     <link>https://zhhbinn.github.io/rss-pick/</link>
     <description>公开版 RSS 内容推荐（增量更新）</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 15 Mar 2026 01:01:30 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 11:01:26 GMT</lastBuildDate>
     <generator>openclaw</generator>
     
     <item>
-      <title>别傻了，写出极致整洁的代码，是你升不了职的根本原因</title>
-      <link>https://tonybai.com/2026/03/15/over-engineering-trap-no-promotion-for-simplicity/</link>
-      <guid isPermaLink="true">https://tonybai.com/2026/03/15/over-engineering-trap-no-promotion-for-simplicity/</guid>
-      <pubDate>Sun, 15 Mar 2026 01:01:30 GMT</pubDate>
-      <description>来源：Tony Bai
-摘要：文章用一个非常“职场真实”的对照：工程师A用极简直白的方案两天上线零故障；工程师B堆叠“企业级架构”与会议、PR，最终在晋升叙事里胜出。作者指出评价体系往往更奖励可展示的复杂度，并给出“把不做什么（避免未挣得的复杂性）包装成可量化影响”的话术模板。
-上榜理由：这篇适合“代码洁癖/工程简化派”反复读两遍：它不只是吐槽‘PPT架构师’，而是把“简单为何难以被看见”讲透了——简单往往意味着你提前把复杂性挡在门外，但这种贡献在组织叙事里天然不显眼。更关键的是，作者给了可直接复用的表达结构：从备选方案评估（ROI、熵增、重构成本）→明确拒绝当下过度设计→量化节省的人日/运维风险→用时间跨度证明稳定性。你可以把它当成一份“工程决策说明书模板”，用来写周报、技术方案、晋升材料：让别人看到你达成简单背后的复杂思考，而不是只看到“50行代码”。对于想在不牺牲工程质量的前提下提升影响力的人，这类叙事能力就是杠杆。</description>
+      <title>Docker 镜像存储与 Dockerfile 转镜像</title>
+      <link>https://jimyag.com/posts/docker-image-storage-and-dockerfile-to-image/</link>
+      <guid isPermaLink="true">https://jimyag.com/posts/docker-image-storage-and-dockerfile-to-image/</guid>
+      <pubDate>Sun, 15 Mar 2026 11:01:26 GMT</pubDate>
+      <description>来源：ᕕ( ᐛ )ᕗ Jimyag&apos;s Blog
+摘要：文章从 Docker 的存储驱动与 OverlayFS 的视角解释：镜像为何是“分层”的、每一层在宿主机上大致如何落盘、Dockerfile 的构建过程怎样逐步生成这些层；并讨论大文件/大层（例如一次 ADD 超大内容）对缓存、传输与磁盘占用的风险，以及可延伸阅读的官方文档索引。
+上榜理由：很多人用 Docker 是“能跑就行”，一旦遇到镜像体积暴涨、构建缓存失效、CI 构建慢、磁盘莫名其妙被吃满，就会发现自己其实不理解镜像层到底是什么。这篇的价值在于把“Dockerfile → 镜像层 → 宿主机文件系统”这条链路讲清楚：你能直接把日常写 Dockerfile 的决策（把哪些步骤放前面、如何拆分 RUN、要不要把大依赖单独成层、何时多阶段构建）映射到可观测的磁盘与缓存行为。尤其对做 CI/CD、需要在多环境复用缓存、或者经常被镜像瘦身折磨的人，这篇会让你从“调参玄学”变成“知道自己在优化什么”。</description>
     </item>
     <item>
-      <title>都在用 OpenClaw 跑 Skill，但你写的“技能”为什么总让 AI 频繁罢工？</title>
-      <link>https://tonybai.com/2026/03/15/why-your-openclaw-skills-make-ai-go-on-strike/</link>
-      <guid isPermaLink="true">https://tonybai.com/2026/03/15/why-your-openclaw-skills-make-ai-go-on-strike/</guid>
-      <pubDate>Sun, 15 Mar 2026 01:01:30 GMT</pubDate>
-      <description>来源：Tony Bai
-摘要：围绕 agent skills（技能）工程，作者总结了导致 AI “想不起来用工具/中途死循环/幻觉乱改代码”的常见根因：描述写法没抢占注意力、只用 MUST/NEVER 恐吓模型反而触发对抗、让 LLM 处理本该由外部脚本承担的数据流与确定性逻辑等，并强调“LLM 控制流、程序管数据流”的工程边界。
-上榜理由：如果你正在把“提示词”升级成“技能工程”，这篇的价值在于它把很多隐性失败模式显性化：为什么同样一套工具，别人跑得顺，你的 agent 频繁‘罢工’？作者用‘注意力权重’‘渐进式披露’‘控制流/数据流分离’这些更工程化的视角，逼你把 Skill 当成‘给模型设计的接口协议’，而不是‘写得越严厉越好’的说明书。特别值得借鉴的是：把复杂逻辑移出 LLM（用脚本/程序做确定性计算），让模型只做选择、调度、归纳与解释；以及在 description 里写清“为什么要这么做”的因果理由，往往比堆砌命令更能提升服从度与稳定性。对 OpenClaw/Claude Code 这类工具驱动型工作流来说，这些原则直接决定了你能否把自动化做成产线而不是一次性 demo。</description>
+      <title>Dockerfile 关键字以及部分关键字的区别</title>
+      <link>https://jimyag.com/posts/dockerfile-keywords/</link>
+      <guid isPermaLink="true">https://jimyag.com/posts/dockerfile-keywords/</guid>
+      <pubDate>Sun, 15 Mar 2026 11:01:26 GMT</pubDate>
+      <description>来源：ᕕ( ᐛ )ᕗ Jimyag&apos;s Blog
+摘要：基于 Docker 官方参考文档，系统梳理 Dockerfile 的各类指令（含解析器指令），并重点对易混淆组合做差异说明，例如 ADD vs COPY、CMD vs ENTRYPOINT、ARG vs ENV 等。
+上榜理由：Dockerfile 的坑往往不是“不会写”，而是“写得看似对、其实行为细节完全不同”。比如 CMD 和 ENTRYPOINT 的组合决定了容器默认行为是否易被覆盖；ARG/ENV 影响构建期与运行期变量的边界；ADD 带来的自动解压/远程 URL 行为可能在安全与可预期性上埋雷。这篇适合当作团队共识的“基线文档”：你可以用它统一 code review 标准，减少‘每个人一套写法’导致的镜像不可维护问题。对新人也很友好：一次性建立正确心智模型，比在踩坑中学要省太多时间。</description>
     </item>
     <item>
-      <title>Clawalytics：给你的 OpenClaw 花费装上一个仪表盘</title>
-      <link>https://blog.einverne.info/post/2026/03/clawalytics-ai-cost-tracking-dashboard.html</link>
-      <guid isPermaLink="true">https://blog.einverne.info/post/2026/03/clawalytics-ai-cost-tracking-dashboard.html</guid>
-      <pubDate>Sun, 15 Mar 2026 01:01:30 GMT</pubDate>
-      <description>来源：Verne in GitHub
-摘要：介绍开源项目 Clawalytics：解析 OpenClaw 本地会话 JSONL 日志，计算每次请求/会话/每日的 token 与成本，并以 Web 仪表盘呈现；支持预算阈值告警、模型分布分析、缓存节省计算、Agent/Channel 维度拆分，还提供 MCP Server 供对话内查询。强调本地运行与隐私友好（SQLite 存储）。
-上榜理由：这是少见把“用 AI 的成本透明化”做得很工程化的项目介绍。很多人对账单的感知只有‘这个月又贵了’，但缺乏可行动的细粒度数据：到底是哪几个会话烧钱？是不是因为上下文越来越长导致输入 token 膨胀？缓存命中到底省了多少？Clawalytics 的思路是“读日志、算清楚、可视化”，而不是做代理层去拦截请求——侵入性低、风险小，适合先落地‘可观察性’。如果你在多个项目/多个模型之间切换，或者团队里有人偶发性‘跑飞’，这个仪表盘能把问题从‘感觉’变成‘证据’：预算、趋势、分布、异常点都能被定位。对长期使用 agent 的人而言，这类成本可观测性几乎等同于“给钱包上监控”。</description>
+      <title>VAIO BIOS 静默更新参数的发现过程 + 一点回忆录</title>
+      <link>https://blog.huggy.moe/posts/2026/4-vaio-bios-update-silent/</link>
+      <guid isPermaLink="true">https://blog.huggy.moe/posts/2026/4-vaio-bios-update-silent/</guid>
+      <pubDate>Sun, 15 Mar 2026 11:01:26 GMT</pubDate>
+      <description>来源：huggy&apos;s blog
+摘要：作者在批量重装系统的项目中，为了自动化 BIOS 更新，逆向/静态分析 VAIO 的 BIOS 更新程序，找到 /VPM_NonInteractive 这类静默参数；并分享了验证方式、可能遇到的 UAC 交互限制，以及项目沟通上的经验教训。
+上榜理由：这篇有两个“硬核点”。第一是非常实用的工程价值：做企业装机/封装/批量初始化时，BIOS 更新常常是自动化链路里最麻烦的一环——厂商文档不全、工具交互式、还可能突然重启。作者用‘从字符串/入口参数入手’的方式，把一个几乎没人写的参数挖出来，属于典型的“把不可控变可控”。第二是方法论：它展示了一个可复用的思路——当官方不写、社区搜不到时，如何通过工具（如反编译/反汇编/静态分析）快速定位可能的开关，并用最小代价验证。对做运维自动化、客户端工程、IT 交付的人来说，这种‘找隐藏开关’的能力非常值钱。</description>
     </item>
     <item>
-      <title>第一记忆模式和第二记忆模式：Kapy 的记忆系统设计</title>
-      <link>https://blog.yanli.one/first-and-second-memory-mode-kapy-memory-system-zh</link>
-      <guid isPermaLink="true">https://blog.yanli.one/first-and-second-memory-mode-kapy-memory-system-zh</guid>
-      <pubDate>Sun, 15 Mar 2026 01:01:30 GMT</pubDate>
-      <description>来源：银河美术馆 Gallery of Galaxy
-摘要：作者分享通用 agent Kapy 的记忆系统：不按 thread 拆分，而以原始信息为 single source of truth；以 turn（一次输入到一次输出的完整 tool-call loop）为最小 compact 单元；用 DAG 的 parents 表达因果与时序；并提出“两种记忆并存”：固定式注入（宽泛、把握全局）+ agent 自主查询（目标明确、查细节）。
-上榜理由：这篇很适合拿来校准你对“记忆”的工程直觉：很多人把对话历史、工具调用日志、知识库混为一谈，结果就是上下文越来越臃肿、召回越来越随机。作者把‘记忆单位’明确到 turn，并把 tool-call loop 定位为‘工作日志而非记忆’，这会直接影响你的系统边界设计（哪些该压缩、哪些该索引、哪些该外部化）。同时，‘固定注入 + 自主查询’这个双通道非常实用：前者解决冷启动与语境连续性，后者解决深挖细节与主动检索。你可以把它当作搭建个人/团队 agent 的一份设计参照：当你的 agent 开始“忘事”或“胡乱记”，先从记忆颗粒度、因果链结构、以及注入策略是否过度开始排查。</description>
+      <title>Unifi 设备在 Official Hosting 的奇怪配对问题</title>
+      <link>https://blog.huggy.moe/posts/2026/3-unifi-cloudhosting-adopt-troubleshooting/</link>
+      <guid isPermaLink="true">https://blog.huggy.moe/posts/2026/3-unifi-cloudhosting-adopt-troubleshooting/</guid>
+      <pubDate>Sun, 15 Mar 2026 11:01:26 GMT</pubDate>
+      <description>来源：huggy&apos;s blog
+摘要：记录 UniFi 设备在 Official Hosting 场景下 adopt（配对/接管）失败的排查过程：包括管理 VLAN/L2 广播域的限制、为什么能发现却 adopt 不上、以及通过 set-inform、DHCP option 43/DNS、第三方 discovery 工具等方式绕开限制，最终发现设备可能被“藏”在默认站点。
+上榜理由：网络设备的‘能发现但接管不了’特别折磨人：看似只差一步，实际常常是 VLAN/L2/L3 边界或控制器多站点权限导致的黑盒行为。这篇的上榜理由是“可复盘、可落地”：它把拓扑前提（管理网必须直连可达、同一广播域）讲清楚，并列出多条备用路径（inform URL、DHCP/DNS、第三方工具），适合你在现场施工/远程交付时当作故障排查清单。更难得的是作者提到 Official Hosting 的多站点（site）机制可能把设备收到默认区，这个坑很隐蔽，但一旦知道就能大幅缩短排障时间。</description>
     </item>
     <item>
-      <title>运动的科学原理与健康价值 - 读《锻炼》</title>
-      <link>https://blog.devtang.com/2026/03/14/exercise-book-summary/</link>
-      <guid isPermaLink="true">https://blog.devtang.com/2026/03/14/exercise-book-summary/</guid>
-      <pubDate>Sun, 15 Mar 2026 01:01:30 GMT</pubDate>
-      <description>来源：唐巧的博客
-摘要：基于进化生物学视角总结《锻炼》：锻炼在某种程度上“反人性”（基因倾向节能），现代久坐环境让主动锻炼变成必要补偿；解释久坐导致慢性炎症的机制、ATP/磷酸原/糖酵解/有氧氧化的能量路径、慢肌与快肌差异，并给出每周 150 分钟中高强度有氧 + 2 次力量训练的建议。
-上榜理由：它的优点是把‘锻炼为什么有效’讲成可理解的因果链，而不是‘你应该运动’的口号。对于很多人来说，真正的阻力不是不知道要锻炼，而是不相信锻炼‘值得’：一忙就停、一停就内疚。这篇用进化与代谢机制解释‘为什么锻炼天然不顺人性’，反而能让你更容易用系统思维设计习惯：把锻炼当成对久坐环境的结构性补偿，而不是意志力对抗。能量系统和肌纤维那部分也很适合用来做训练选择：你想提升耐力还是爆发力？为什么高强度更依赖糖代谢、会更快疲劳？理解这些之后，你更可能做出“可持续”的计划，而不是盲目跟风。</description>
+      <title>wechat2md：将公众号文章转为Markdown</title>
+      <link>https://arminli.com/wechat2md/</link>
+      <guid isPermaLink="true">https://arminli.com/wechat2md/</guid>
+      <pubDate>Sun, 15 Mar 2026 11:01:26 GMT</pubDate>
+      <description>来源：Armin
+摘要：介绍 wechat2md：把微信公众号文章一键转换为 Markdown，并处理图片防盗链（转存到图床）、提取标题/作者/发布日期生成 YAML front matter；同时提供 Web 界面与 HTTP API，便于集成到自动化归档与内容迁移流程。
+上榜理由：如果你有“内容资产化”的习惯（把公众号文章存到 Obsidian、Git、知识库、Notion/飞书、或自建博客），公众号的富文本与图片防盗链基本是绕不开的阻碍。wechat2md 的价值在于把最脏最耗时的那部分（格式清洗 + 图片可用性）做成了标准化流程：输出 Markdown + 元信息，天然适配静态站/知识库/全文检索。更关键的是它提供 HTTP API——这意味着你可以把它塞进自己的流水线：例如 RSS/收藏夹 → 自动拉取 → 转 Markdown → 提交 Git → 构建站点。对重度阅读/写作/归档的人，这种工具能直接省下大量重复劳动。</description>
     </item>
     <item>
-      <title>微说 | 既然错过了路口，就及时止损，重新规划路线上路</title>
-      <link>https://www.xiabingbao.com/talk/t/mmn9h2x3.html</link>
-      <guid isPermaLink="true">https://www.xiabingbao.com/talk/t/mmn9h2x3.html</guid>
-      <pubDate>Sun, 15 Mar 2026 01:01:30 GMT</pubDate>
-      <description>来源：蚊子的前端博客
-摘要：用导航软件的比喻谈“止损”：导航不会指责你走错路，只会冷静提示重新规划路线；人生内耗往往来自沉浸式后悔，而不是把注意力转向下一条可行路径。
-上榜理由：这是一段短文，但很适合当成日常‘认知快捷键’。它把止损从金融语境拉回到生活与工作决策：当你发现方向不对时，最耗能的不是走错这一步，而是不断在脑内复盘‘我怎么会这么蠢’，让情绪占满带宽，导致你更难做出下一步。把自己当成导航系统而不是‘自我批判机器’，其实是一种更强的执行力：承认偏航 → 立刻求解下一条路 → 继续前进。尤其在项目管理、职业选择、甚至学习计划里，这种“重规划而非自责”的心态能显著减少拖延与自我消耗。</description>
+      <title>生产力陷阱与无限增长幻象</title>
+      <link>https://blog.douchi.space/productivity-growth-trap/?utm_source=rss</link>
+      <guid isPermaLink="true">https://blog.douchi.space/productivity-growth-trap/?utm_source=rss</guid>
+      <pubDate>Sun, 15 Mar 2026 11:01:26 GMT</pubDate>
+      <description>来源：椒盐豆豉
+摘要：作者围绕“生产力”叙事展开反思：当社会与个体把效率、增长当成唯一目标时，容易陷入一种永远不够的焦躁循环；并结合科技行业语境，讨论 AI 时代的“生产力狂热”如何影响人的节奏、评价体系与生活感。
+上榜理由：技术信息流里很容易被‘更快、更省、更多产出’的叙事裹挟，尤其在 AI 工具爆发后，很多人会把焦虑包装成“提升生产力”。这篇文章适合拿来做一次‘心理与行动的校准’：它不是反技术，而是提醒你区分“工具提升效率”与“把自我价值绑定在无限产出”之间的界线。读完你更可能做出更聪明的选择：哪些环节值得自动化、哪些其实是生活的留白；哪些 KPI 是外部强加、哪些目标是自己真正想要的。对长期保持创作/学习/工作可持续性的人，这类反思比再多一个效率技巧更稀缺。</description>
+    </item>
+    <item>
+      <title>GTC 2026 Eve: AI is Becoming the New Infrastructure</title>
+      <link>https://jimmysong.io/blog/gtc-2026-ai-native-infrastructure/</link>
+      <guid isPermaLink="true">https://jimmysong.io/blog/gtc-2026-ai-native-infrastructure/</guid>
+      <pubDate>Sun, 15 Mar 2026 11:01:26 GMT</pubDate>
+      <description>来源：Jimmy Song – 博客
+摘要：文章以 NVIDIA GTC 2026 为切入点，讨论 AI 从“应用”走向“基础设施”的趋势，梳理从芯片、数据中心到 Agent/推理工作负载的演进，并提出 AI-native infrastructure 的关键特征（GPU 一等资源、异构计算、GPU 共享/切分、AI 调度等）。
+上榜理由：这篇适合“需要建立宏观判断”的读者：当你在做技术选型、规划算力、建设平台或评估未来 1–3 年方向时，零散新闻不够用，你需要一套能把信号串起来的框架。作者把 AI 的工作负载从训练转向推理、从单次推理转向 agentic workload 的变化讲得很清楚，并落回到基础设施层的现实约束（调度、共享、异构、成本）。它不一定给你一个立刻能照搬的方案，但能帮你在讨论 GPU 池化、推理集群、资源隔离、利用率优化时更少“凭感觉”，更像是在围绕未来负载形态做工程决策。</description>
     </item>
   </channel>
 </rss>

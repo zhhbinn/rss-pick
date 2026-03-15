@@ -2,11 +2,78 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-03-15T09:01:30.642+08:00",
+    "updated_at": "2026-03-15T19:01:26.745+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-03-15T19:01:26.745+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：7 条推荐",
+      "edition": {
+        "title": "FreshRSS 内容推荐",
+        "items": [
+          {
+            "title": "Docker 镜像存储与 Dockerfile 转镜像",
+            "source": "ᕕ( ᐛ )ᕗ Jimyag's Blog",
+            "link": "https://jimyag.com/posts/docker-image-storage-and-dockerfile-to-image/",
+            "summary": "文章从 Docker 的存储驱动与 OverlayFS 的视角解释：镜像为何是“分层”的、每一层在宿主机上大致如何落盘、Dockerfile 的构建过程怎样逐步生成这些层；并讨论大文件/大层（例如一次 ADD 超大内容）对缓存、传输与磁盘占用的风险，以及可延伸阅读的官方文档索引。",
+            "reason": "很多人用 Docker 是“能跑就行”，一旦遇到镜像体积暴涨、构建缓存失效、CI 构建慢、磁盘莫名其妙被吃满，就会发现自己其实不理解镜像层到底是什么。这篇的价值在于把“Dockerfile → 镜像层 → 宿主机文件系统”这条链路讲清楚：你能直接把日常写 Dockerfile 的决策（把哪些步骤放前面、如何拆分 RUN、要不要把大依赖单独成层、何时多阶段构建）映射到可观测的磁盘与缓存行为。尤其对做 CI/CD、需要在多环境复用缓存、或者经常被镜像瘦身折磨的人，这篇会让你从“调参玄学”变成“知道自己在优化什么”。",
+            "recommended_at": "2026-03-15T19:01:26.745+08:00"
+          },
+          {
+            "title": "Dockerfile 关键字以及部分关键字的区别",
+            "source": "ᕕ( ᐛ )ᕗ Jimyag's Blog",
+            "link": "https://jimyag.com/posts/dockerfile-keywords/",
+            "summary": "基于 Docker 官方参考文档，系统梳理 Dockerfile 的各类指令（含解析器指令），并重点对易混淆组合做差异说明，例如 ADD vs COPY、CMD vs ENTRYPOINT、ARG vs ENV 等。",
+            "reason": "Dockerfile 的坑往往不是“不会写”，而是“写得看似对、其实行为细节完全不同”。比如 CMD 和 ENTRYPOINT 的组合决定了容器默认行为是否易被覆盖；ARG/ENV 影响构建期与运行期变量的边界；ADD 带来的自动解压/远程 URL 行为可能在安全与可预期性上埋雷。这篇适合当作团队共识的“基线文档”：你可以用它统一 code review 标准，减少‘每个人一套写法’导致的镜像不可维护问题。对新人也很友好：一次性建立正确心智模型，比在踩坑中学要省太多时间。",
+            "recommended_at": "2026-03-15T19:01:26.745+08:00"
+          },
+          {
+            "title": "VAIO BIOS 静默更新参数的发现过程 + 一点回忆录",
+            "source": "huggy's blog",
+            "link": "https://blog.huggy.moe/posts/2026/4-vaio-bios-update-silent/",
+            "summary": "作者在批量重装系统的项目中，为了自动化 BIOS 更新，逆向/静态分析 VAIO 的 BIOS 更新程序，找到 /VPM_NonInteractive 这类静默参数；并分享了验证方式、可能遇到的 UAC 交互限制，以及项目沟通上的经验教训。",
+            "reason": "这篇有两个“硬核点”。第一是非常实用的工程价值：做企业装机/封装/批量初始化时，BIOS 更新常常是自动化链路里最麻烦的一环——厂商文档不全、工具交互式、还可能突然重启。作者用‘从字符串/入口参数入手’的方式，把一个几乎没人写的参数挖出来，属于典型的“把不可控变可控”。第二是方法论：它展示了一个可复用的思路——当官方不写、社区搜不到时，如何通过工具（如反编译/反汇编/静态分析）快速定位可能的开关，并用最小代价验证。对做运维自动化、客户端工程、IT 交付的人来说，这种‘找隐藏开关’的能力非常值钱。",
+            "recommended_at": "2026-03-15T19:01:26.745+08:00"
+          },
+          {
+            "title": "Unifi 设备在 Official Hosting 的奇怪配对问题",
+            "source": "huggy's blog",
+            "link": "https://blog.huggy.moe/posts/2026/3-unifi-cloudhosting-adopt-troubleshooting/",
+            "summary": "记录 UniFi 设备在 Official Hosting 场景下 adopt（配对/接管）失败的排查过程：包括管理 VLAN/L2 广播域的限制、为什么能发现却 adopt 不上、以及通过 set-inform、DHCP option 43/DNS、第三方 discovery 工具等方式绕开限制，最终发现设备可能被“藏”在默认站点。",
+            "reason": "网络设备的‘能发现但接管不了’特别折磨人：看似只差一步，实际常常是 VLAN/L2/L3 边界或控制器多站点权限导致的黑盒行为。这篇的上榜理由是“可复盘、可落地”：它把拓扑前提（管理网必须直连可达、同一广播域）讲清楚，并列出多条备用路径（inform URL、DHCP/DNS、第三方工具），适合你在现场施工/远程交付时当作故障排查清单。更难得的是作者提到 Official Hosting 的多站点（site）机制可能把设备收到默认区，这个坑很隐蔽，但一旦知道就能大幅缩短排障时间。",
+            "recommended_at": "2026-03-15T19:01:26.745+08:00"
+          },
+          {
+            "title": "wechat2md：将公众号文章转为Markdown",
+            "source": "Armin",
+            "link": "https://arminli.com/wechat2md/",
+            "summary": "介绍 wechat2md：把微信公众号文章一键转换为 Markdown，并处理图片防盗链（转存到图床）、提取标题/作者/发布日期生成 YAML front matter；同时提供 Web 界面与 HTTP API，便于集成到自动化归档与内容迁移流程。",
+            "reason": "如果你有“内容资产化”的习惯（把公众号文章存到 Obsidian、Git、知识库、Notion/飞书、或自建博客），公众号的富文本与图片防盗链基本是绕不开的阻碍。wechat2md 的价值在于把最脏最耗时的那部分（格式清洗 + 图片可用性）做成了标准化流程：输出 Markdown + 元信息，天然适配静态站/知识库/全文检索。更关键的是它提供 HTTP API——这意味着你可以把它塞进自己的流水线：例如 RSS/收藏夹 → 自动拉取 → 转 Markdown → 提交 Git → 构建站点。对重度阅读/写作/归档的人，这种工具能直接省下大量重复劳动。",
+            "recommended_at": "2026-03-15T19:01:26.745+08:00"
+          },
+          {
+            "title": "生产力陷阱与无限增长幻象",
+            "source": "椒盐豆豉",
+            "link": "https://blog.douchi.space/productivity-growth-trap/?utm_source=rss",
+            "summary": "作者围绕“生产力”叙事展开反思：当社会与个体把效率、增长当成唯一目标时，容易陷入一种永远不够的焦躁循环；并结合科技行业语境，讨论 AI 时代的“生产力狂热”如何影响人的节奏、评价体系与生活感。",
+            "reason": "技术信息流里很容易被‘更快、更省、更多产出’的叙事裹挟，尤其在 AI 工具爆发后，很多人会把焦虑包装成“提升生产力”。这篇文章适合拿来做一次‘心理与行动的校准’：它不是反技术，而是提醒你区分“工具提升效率”与“把自我价值绑定在无限产出”之间的界线。读完你更可能做出更聪明的选择：哪些环节值得自动化、哪些其实是生活的留白；哪些 KPI 是外部强加、哪些目标是自己真正想要的。对长期保持创作/学习/工作可持续性的人，这类反思比再多一个效率技巧更稀缺。",
+            "recommended_at": "2026-03-15T19:01:26.745+08:00"
+          },
+          {
+            "title": "GTC 2026 Eve: AI is Becoming the New Infrastructure",
+            "source": "Jimmy Song – 博客",
+            "link": "https://jimmysong.io/blog/gtc-2026-ai-native-infrastructure/",
+            "summary": "文章以 NVIDIA GTC 2026 为切入点，讨论 AI 从“应用”走向“基础设施”的趋势，梳理从芯片、数据中心到 Agent/推理工作负载的演进，并提出 AI-native infrastructure 的关键特征（GPU 一等资源、异构计算、GPU 共享/切分、AI 调度等）。",
+            "reason": "这篇适合“需要建立宏观判断”的读者：当你在做技术选型、规划算力、建设平台或评估未来 1–3 年方向时，零散新闻不够用，你需要一套能把信号串起来的框架。作者把 AI 的工作负载从训练转向推理、从单次推理转向 agentic workload 的变化讲得很清楚，并落回到基础设施层的现实约束（调度、共享、异构、成本）。它不一定给你一个立刻能照搬的方案，但能帮你在讨论 GPU 池化、推理集群、资源隔离、利用率优化时更少“凭感觉”，更像是在围绕未来负载形态做工程决策。",
+            "recommended_at": "2026-03-15T19:01:26.745+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-03-15T09:01:30.642+08:00",
       "check": "freshrss-digest",
