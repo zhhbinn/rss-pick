@@ -5,71 +5,71 @@
     <link>https://zhhbinn.github.io/rss-pick/</link>
     <description>公开版 RSS 内容推荐（增量更新）</description>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Mar 2026 01:01:46 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 11:01:37 GMT</lastBuildDate>
     <generator>openclaw</generator>
     
     <item>
-      <title>关于AI的一些形而上思考</title>
-      <link>https://idealclover.top/archives/647/</link>
-      <guid isPermaLink="true">https://idealclover.top/archives/647/</guid>
-      <pubDate>Mon, 16 Mar 2026 01:01:46 GMT</pubDate>
-      <description>来源：idealclover
-摘要：作者从 AI 的“终态想象”、对编程的改变、以及信息过载/茧房等风险三个维度展开，提出 AI 更像是对人类知识的统计拟合：能模仿但缺乏对真善美的责任与体验，并强调人在 AI 时代要把效率让给工具，把判断与意义留给自己。
-上榜理由：它不“站队”、不喊口号，而是把很多人对 AI 的兴奋与不安拆成可检验的几段：AI 为什么像“平均幽灵”、为什么会把工作从 0→0.8 推动但最后 0.2 仍需要人、以及信息洪流如何反过来侵蚀思考能力。适合在被工具更新推着跑、又隐隐焦虑的人读：读完能更清楚地回答“我到底要拿 AI 干什么、哪些东西必须由我来做”。</description>
+      <title>在 Kubernetes 上部署 JupyterHub 的经验记录</title>
+      <link>https://harrychen.xyz/2026/03/16/deploy-jupyterhub-on-kubernetes/</link>
+      <guid isPermaLink="true">https://harrychen.xyz/2026/03/16/deploy-jupyterhub-on-kubernetes/</guid>
+      <pubDate>Mon, 16 Mar 2026 11:01:37 GMT</pubDate>
+      <description>来源：Harry Chen’s Blog
+摘要：作者在教学实验室的 Kubernetes 集群上部署 JupyterHub（Helm Chart），详细记录了 OAuth 接入、Ingress 子路径、用户镜像与 profile、资源限制与调度预热、CephFS 持久化存储、空闲回收（culler），以及通过共享 PVC 解决中文字体等一系列实战配置与踩坑。
+上榜理由：这是一篇“能直接照着落地”的 JupyterHub on K8s 实操笔记：它不只讲官方最佳实践（Zero to JupyterHub），还把真实场景里最容易卡住的点（子路径 baseUrl、OAuth 细节、资源 guarantee/limit 的教学场景权衡、预热 placeholder、RWX 存储选择、以及中文字体的工程化兜底）一次讲透。对你要做“面向多人/课程的交互式计算平台”尤其有用：从用户体验（登录即用、启动速度）到运维成本（不维护镜像、靠启动时 pip 安装）都给了清晰的取舍路径。</description>
     </item>
     <item>
-      <title>用开发 Agent 理解 Agent 02：数据即代码，代码即数据</title>
-      <link>https://blog.lyric.im/p/understanding-agent-02-data-is-code-code-is-data</link>
-      <guid isPermaLink="true">https://blog.lyric.im/p/understanding-agent-02-data-is-code-code-is-data</guid>
-      <pubDate>Mon, 16 Mar 2026 01:01:46 GMT</pubDate>
-      <description>来源：歌词经理
-摘要：文章从 Agent 的 loop（收集→整理→决策→执行→再收集）切入，解释 LLM 时代“数据与控制流”边界在语义层面消融：上一轮输出会直接成为下一轮输入条件；并提出“保守区/可变区”的架构视角，核心约束要稳定，可变策略允许进化。
-上榜理由：这篇适合“正在用/想用 Agent 做事”的工程师读：它给了一个很干净的心智模型，解释为什么我们本能地想给 Agent 加约束、约束应该加在哪里、以及为什么仅靠“更强的模型”并不能解决可控性问题。读完你会更容易把“Prompt/Memory/工具调用/自我修改”放进同一张图里，进而做出更稳的系统设计取舍。</description>
-    </item>
-    <item>
-      <title>Kubernetes Pod 创建流程</title>
-      <link>https://jimyag.com/posts/kubernetes-pod-creation-flow/</link>
-      <guid isPermaLink="true">https://jimyag.com/posts/kubernetes-pod-creation-flow/</guid>
-      <pubDate>Mon, 16 Mar 2026 01:01:46 GMT</pubDate>
+      <title>client-go Informer、Reflector、Indexer、Workqueue 介绍</title>
+      <link>https://jimyag.com/posts/client-go-informer-reflector-indexer-workqueue/</link>
+      <guid isPermaLink="true">https://jimyag.com/posts/client-go-informer-reflector-indexer-workqueue/</guid>
+      <pubDate>Mon, 16 Mar 2026 11:01:37 GMT</pubDate>
       <description>来源：ᕕ( ᐛ )ᕗ Jimyag&apos;s Blog
-摘要：基于 Kubernetes 官方文档，按时间线梳理 Pod 从提交到真正运行，涉及 API Server、调度器、kubelet/容器运行时等关键环节与交互点。
-上榜理由：K8s 的“玄学问题”常常不是玄学，而是你不知道事件在链路上卡在哪里。这类“按阶段拆解”的文章价值很高：一方面能帮助你定位（到底是 admission、scheduler 还是 kubelet/CRI），另一方面也能让你在设计运维指标和告警时更有抓手。适合拿来当排障的底层地图。</description>
+摘要：围绕 Kubernetes client-go 控制器常用组件，梳理 Informer/Reflector/Indexer/Workqueue 的定义、职责边界、数据流与典型用法入口，帮助读者建立从 API Server watch 到本地缓存与队列驱动 reconcile 的整体心智模型。
+上榜理由：写控制器/Operator 时，真正难的往往不是“会不会调 client-go”，而是“理解事件流为何这样设计”。这篇文章的价值在于把多个概念串成一条连续链路：watch/list 如何进入 Reflector、为何需要本地 cache、Indexer 做什么、Workqueue 如何实现去重/重试/限速。读完你会更容易定位性能与一致性问题（比如热点对象、队列堆积、缓存命中），也更能写出可维护的 controller 结构，而不是靠复制粘贴样例跑起来就算。</description>
     </item>
     <item>
-      <title>macvlan 与 ipvlan 介绍</title>
-      <link>https://jimyag.com/posts/macvlan-ipvlan-intro/</link>
-      <guid isPermaLink="true">https://jimyag.com/posts/macvlan-ipvlan-intro/</guid>
-      <pubDate>Mon, 16 Mar 2026 01:01:46 GMT</pubDate>
-      <description>来源：ᕕ( ᐛ )ᕗ Jimyag&apos;s Blog
-摘要：文章基于 Linux 内核与 iproute2 文档，对比 macvlan 与 ipvlan 的模式、特点与适用场景，解释它们在二层/三层行为、性能与可维护性上的差异。
-上榜理由：很多人第一次碰到 macvlan/ipvlan 是在容器网络、旁路接入、或“让容器像一台独立主机一样出现在 LAN 上”的需求里；但选错方案会带来排障地狱（例如主机与子接口互通、交换机学习行为等）。这篇的价值在于：把“看似相近的两个东西”拆到机制层讲清楚，读完更容易根据限制条件（是否需要独立 MAC、是否希望复用宿主 L2 等）做出正确选择。</description>
+      <title>真相调查：Go 语言真的消灭了 Undefined Behavior 吗？</title>
+      <link>https://tonybai.com/2026/03/16/go-language-eliminated-undefined-behavior-truth-investigation/</link>
+      <guid isPermaLink="true">https://tonybai.com/2026/03/16/go-language-eliminated-undefined-behavior-truth-investigation/</guid>
+      <pubDate>Mon, 16 Mar 2026 11:01:37 GMT</pubDate>
+      <description>来源：Tony Bai
+摘要：文章从早期 golang-nuts 讨论切入，解释 Go 如何用“定义明确的错误”（如越界/空指针触发 panic、整数溢出规则）减少传统 UB，同时指出在并发数据竞争（data race）下仍存在未定义行为风险，并讨论 map 遍历顺序、求值顺序等“未指明行为”的工程影响。
+上榜理由：很多人把 Go 的“内存安全”理解成“绝对不会出诡异问题”，但生产事故往往来自并发边界。本文把关键认知补上：Go 在单线程语义上很“确定”，但一旦 data race 出现，可能不只是读到旧值这么简单，而是引发更深层的不一致（尤其是多字结构如 interface/slice 等）。它能帮助你把“开 -race、加锁/原子、避免共享可变状态”从建议升级为纪律；也能提醒你在代码审查时重点盯并发写读路径，而不是被表面的类型系统麻痹。</description>
     </item>
     <item>
-      <title>肾结石的一周</title>
-      <link>http://oilbeater.com/2026/03/15/kidney-stones/</link>
-      <guid isPermaLink="true">http://oilbeater.com/2026/03/15/kidney-stones/</guid>
-      <pubDate>Mon, 16 Mar 2026 01:01:46 GMT</pubDate>
-      <description>来源：Oilbeater 的自习室
-摘要：作者记录从误以为是拉伤到被 120 送医确诊输尿管结石的全过程：疼痛发作特点、检查流程、用药与等待自然排出期间的应对，以及对成因（喝水少等）的反思。
-上榜理由：这是少见的“可直接复用”的就医经验帖：它把症状、误判、检查路径（CT/尿检/血常规）、以及医生常见建议讲得非常具象。对读者的价值不在于“吓人”，而在于：当你或家人遇到类似剧烈腰腹痛时，能更快把疑似肾结石纳入排查，并知道哪些信号值得及时就医、哪些生活习惯需要立刻调整。</description>
+      <title>重塑站外体验：大众点评 M 站基于 Qwik.js 的重构实践</title>
+      <link>https://tech.meituan.com/2026/03/13/qwik-practice-in-dianping.html</link>
+      <guid isPermaLink="true">https://tech.meituan.com/2026/03/13/qwik-practice-in-dianping.html</guid>
+      <pubDate>Mon, 16 Mar 2026 11:01:37 GMT</pubDate>
+      <description>来源：美团技术团队
+摘要：大众点评增长团队引入 Qwik.js 重构 M 站核心页面，利用“可恢复性（resumability）”减少传统水合成本，并结合全链路优化与工程化适配，提升加载与交互性能，同时降低维护成本；文章拆解了技术选型、原理与落地细节。
+上榜理由：前端性能优化已经从“微调指标”进入“框架范式竞争”阶段：Qwik 的 resumability 代表了一条与 React/Vue 传统 hydration 不同的路线。美团这类大流量业务的实战复盘特别有参考价值：你能看到它在真实约束下如何评估收益、如何做工程化接入、以及在复杂业务里怎么落地到指标提升而不是概念炫技。适合做增长/SEO/站外承接的团队拿来对标：哪些问题靠框架能力解决，哪些还得靠链路治理与工程纪律。</description>
     </item>
     <item>
-      <title>博客二十一周年</title>
-      <link>https://shuiba.co/blog-21st-anniversary</link>
-      <guid isPermaLink="true">https://shuiba.co/blog-21st-anniversary</guid>
-      <pubDate>Mon, 16 Mar 2026 01:01:46 GMT</pubDate>
-      <description>来源：Shuibaco • 水八口
-摘要：作者回溯自己从 2005/2006 起在不同平台写作、迁移与分流（“熟人知/熟人不知”）的经历，并借“周年”重新确认：写作与建站的意义在于把青春、记忆与技能沉淀成可追溯的文本。
-上榜理由：在“内容流”越来越快的时代，这篇像一剂反算法的定心丸：它提醒你，写作/建站不一定是为了流量，而是为了建立自己的时间线与个人档案。尤其适合正在搭博客、做笔记系统、或反复迁移工具的人读——它会让你更坚定地选择“把东西留在自己能掌控的地方”。</description>
+      <title>当 Kanban 不再管理人：Routa Kanban 如何管理 Agent Team</title>
+      <link>http://www.phodal.com/blog/routa-kanban/</link>
+      <guid isPermaLink="true">http://www.phodal.com/blog/routa-kanban/</guid>
+      <pubDate>Mon, 16 Mar 2026 11:01:37 GMT</pubDate>
+      <description>来源：Blog | Phodal - A Growth Engineer
+摘要：讨论当 AI/Agent 以团队形式协作时，管理重点从“人”转向“任务流与执行语义”，并介绍 Routa Kanban 的方法与思路，用看板去组织 Agent 的工作拆解、并行、验证与交付。
+上榜理由：很多团队上了 Agent 之后会陷入两极：要么把它当更快的码农，要么把它当黑盒魔法。本文的意义在于把问题定性为“流程与可控性”：当执行是概率性的、长程的、带状态的，看板需要管理的不只是待办列表，而是拆分粒度、验收点、回滚/重跑策略、以及并行协作的冲突处理。即便你不用 Routa Kanban，这篇文章也能给你一套“如何让 Agent 工作可追踪、可复现、可验收”的框架，避免自动化越做越乱。</description>
     </item>
     <item>
-      <title>稻草人周刊 Vol.72</title>
-      <link>https://www.geedea.pro/weekly/72/</link>
-      <guid isPermaLink="true">https://www.geedea.pro/weekly/72/</guid>
-      <pubDate>Mon, 16 Mar 2026 01:01:46 GMT</pubDate>
-      <description>来源：極客死亡計劃
-摘要：一期信息密度很高的周刊：从音乐专辑分享出发，延伸到成人 ADHD 自检、标记语言（Org Mode vs Markdown）的取舍讨论、写作表达的小技巧，以及若干工具/项目推荐。
-上榜理由：好的周刊不是“链接堆砌”，而是带着作者审美与判断的筛选。这期的亮点是跨域但不散：既有具体可用的自检量表与工具，也有对写作表达、工具选择的“可迁移思考”。适合当作一份轻量但有营养的周末阅读清单：读完你很可能会顺手收藏一两个工具、同时把一个旧习惯（比如标记语言/写作措辞）再想一遍。</description>
+      <title>第260期 - 去太子湾</title>
+      <link>https://weekly.tw93.fun/posts/260/</link>
+      <guid isPermaLink="true">https://weekly.tw93.fun/posts/260/</guid>
+      <pubDate>Mon, 16 Mar 2026 11:01:37 GMT</pubDate>
+      <description>来源：潮流周刊
+摘要：一份偏工程师视角的周刊：包含 Claude Code 的架构/治理实践长文、开源工具 Mole 与 Kaku 的版本更新、交互式 MicroGPT 学习站等“可直接动手”的资源推荐与简短点评。
+上榜理由：周刊的价值在“筛选 + 语境”：同样是工具更新与文章链接，作者会把它们放在实际使用场景里讲清楚“它解决了什么具体麻烦”。本期尤其适合想把 AI 编码工具、终端/文件管理器、学习型 Demo 组合成个人工作流的人：你能快速补齐一批高信噪比的资源，然后按自己的习惯做二次整合，而不用在信息海里盲搜。</description>
+    </item>
+    <item>
+      <title>洪绘图标助手更新：获取应用图标、将你的图标对mac进行适配</title>
+      <link>https://blog.zhheo.com/p/z9rm5p4p.html</link>
+      <guid isPermaLink="true">https://blog.zhheo.com/p/z9rm5p4p.html</guid>
+      <pubDate>Mon, 16 Mar 2026 11:01:37 GMT</pubDate>
+      <description>来源：张洪Heo
+摘要：介绍“洪绘图标助手”更新：一是按应用名搜索并下载图标；二是把图标一键适配 macOS（尤其解决 Chrome/Edge 创建网页应用后图标显示不佳的问题），用简单操作替换为更符合 macOS 视觉的图标样式。
+上榜理由：这是很典型的“把小痛点做成顺手工具”的作品：很多人用网页应用/渐进式应用当半个桌面 App，但图标丑、辨识度低会持续消耗注意力。文章把两个高频需求（快速找图标、适配 macOS 图标风格）打包成一条轻量流程，特别适合做大量调研/PPT、或把常用 Web 工具固定成 Dock 应用的人。看完你基本就能把自己的工作台面做得更干净、更一致，属于投入很小但幸福感很高的改进。</description>
     </item>
   </channel>
 </rss>
