@@ -2,11 +2,78 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-03-16T19:01:37.574+08:00",
+    "updated_at": "2026-03-17T19:01:28.101+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-03-17T19:01:28.101+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：7 条推荐",
+      "edition": {
+        "title": "FreshRSS 内容推荐",
+        "items": [
+          {
+            "title": "浅学WebTransport API：下一代Web双向通信技术",
+            "source": "张鑫旭-鑫空间-鑫生活",
+            "link": "https://www.zhangxinxu.com/wordpress/2026/03/webtransport-api/",
+            "summary": "系统梳理 WebTransport（基于 HTTP/3 + QUIC）的核心能力：0-RTT/1-RTT 建连、多路复用避免队头阻塞、支持可靠流与不可靠数据报、连接迁移等，并给出前端侧连接、双向流与数据报的示例代码与选型建议。",
+            "reason": "这篇不是“概念科普”而是“工程选型说明书”。它把 WebTransport 相对 WebSocket 的关键差异，落到了你会在真实业务里遇到的痛点（队头阻塞、网络切换断连、高频数据延迟）上，并给出了清晰的“什么时候值得上、什么时候没必要”的判断标准。尤其适合做实时协作、直播/弹幕、游戏同步、移动网络场景的人：读完能直接把功能拆成“控制信令走可靠流、状态同步走数据报”的架构草图，减少拍脑袋换技术的风险。",
+            "recommended_at": "2026-03-17T19:01:28.101+08:00"
+          },
+          {
+            "title": "MTU Probe 引起的初始延迟",
+            "source": "卡瓦邦噶！",
+            "link": "https://www.kawabangga.com/posts/7221",
+            "summary": "通过抓包解释“每个 TCP 连接都卡 3.5s 才开始传数据”的根因：链路真实 MTU 小于客户端配置导致大包被丢且 ICMP 不可达形成 blackhole；在 tcp_retries1 重传阈值后触发 MTU probing，逐步降低 MSS 才打通。并给出相关 sysctl 参数与复现/验证思路。",
+            "reason": "非常典型的“现象诡异但根因朴素”的网络故障：业务侧看到的是首包慢、连接建立慢、偶发超时；真正的 culprit 却是 MTU/MSS 与 ICMP 被丢导致的黑洞。文章的价值在于把时间线（0.3s/0.8s/1.7s/3.5s）和内核参数（tcp_retries1、tcp_base_mss、tcp_mtu_probing）对应起来，让你在排查“初始延迟”“跨网段慢”“云上隧道/专线奇怪抖动”时有一套可执行的定位路径：先抓包找 ACK 缺失，再看重传节奏与 MSS 变化，最后回到 MTU 配置与 ICMP 策略。",
+            "recommended_at": "2026-03-17T19:01:28.101+08:00"
+          },
+          {
+            "title": "用好你的 jj - 重新思考 Agent 时代的版本控制",
+            "source": "OneV's Den",
+            "link": "https://onevcat.com/2026/03/jj-for-agent-era/",
+            "summary": "从高强度 agent 写代码的体验出发，讨论 Git 在本地变更管理中的摩擦点，并介绍 Jujutsu（jj）如何用不同的心智模型降低“频繁试错、来回切换、保留多条探索路径”的成本，让人与 agent 协作时更顺手。",
+            "reason": "很多团队已经把“让 agent 写得更快”当成默认项，但真正拖累效率的常常是“如何管理 agent 吐出来的变更”。这篇文章抓住了关键：Git 的 staging/branch/stash 设计更偏人类线性工作流，而 agent 时代更像是并行试探、多次回滚、碎片化产出。推荐给在做 AI coding 工作流的人：你会重新审视“提交粒度、变更历史、回滚与复用”的成本结构，进而决定是继续优化 Git 习惯（更严格的分支策略/提交规范），还是引入 jj 这类更贴合探索式开发的工具。",
+            "recommended_at": "2026-03-17T19:01:28.101+08:00"
+          },
+          {
+            "title": "DeepWiki 优化实战：代码行号与确定性目录生成",
+            "source": "crossoverJie's Blog",
+            "link": "http://crossoverjie.top/2026/03/17/AI/deepwiki-optimize-line-number/",
+            "summary": "分享在用 DeepWiki 类 RAG/wiki 生成工具时的两类常见“幻觉/不稳定”问题：代码引用行号不准、目录结构被 LLM 随机发挥；对应给出两种工程化改造：给每行代码加真实行号前缀让模型“读而非算”，以及解析 proto 文件生成确定性目录以绕过 LLM 生成目录。",
+            "reason": "这篇文章把“怎么让 LLM 更可靠”讲得非常工程化：不是继续堆提示词，而是把确定性信息前置计算、把不确定性留给模型总结。它提供了可迁移的套路——任何你遇到的“模型不擅长的精确计算/结构化生成”（如编号、位置、目录、列表一致性），都可以用“给出答案而不是让它推算”的方式解决。对正在做 RAG、代码助手、自动文档、内部知识库的人来说，这是非常实用的一次示范：少花 token 在玄学上，多把系统做成可验证、可回归的工程。",
+            "recommended_at": "2026-03-17T19:01:28.101+08:00"
+          },
+          {
+            "title": "Open Prompt：AI 时代的 PR 协作新范式",
+            "source": "硬盘在歌唱",
+            "link": "http://disksing.com/open-prompt/",
+            "summary": "提出把协作重心从“审查最终代码 diff”转向“协作生成过程”：先开空 PR，在 PR 评论里驱动长期运行的 coding agent 会话持续产出并推送变更，让 reviewer 既看 diff 也看生成过程，从而缓解 AI 时代动辄成千上万行的 review 瘫痪。",
+            "reason": "它点中了当下最真实的团队痛点：代码越来越“便宜”，但 review 的注意力预算没有变，甚至更稀缺。把 prompt/过程放进 PR 的协作面板，本质上是在提高“可追溯性”和“可解释性”，让审查不再只是末端拦截，而是中途介入、共同约束。值得推荐给带团队的人：你不一定要全盘采纳，但至少可以把其中的想法转成可落地的改造，比如：把 agent 的关键提示词、约束、评估标准（tests/fitness function）写入 PR 模板；要求 agent 产出变更摘要+风险点；把“为何这样写”变成可审阅资产，减少日后返工。",
+            "recommended_at": "2026-03-17T19:01:28.101+08:00"
+          },
+          {
+            "title": "A Community-Oriented Refactor: Why HAMi Docs and Website Underwent a Complete Redesign",
+            "source": "Jimmy Song – 博客",
+            "link": "https://jimmysong.io/blog/hami-website-redesign-retrospective/",
+            "summary": "以开源项目 HAMi 为例复盘一次“社区导向”的官网/文档重构：不仅是视觉改版，更是信息架构、内容系统、搜索与移动体验、社区证明层（案例/生态/采用者）的一体升级，并讨论这类改版对社区增长与技术传播的意义。",
+            "reason": "如果你做开源或做技术产品文档，会立刻共鸣：很多项目不是“技术不行”，而是“表达层基础设施”不足，导致用户无法在 30 秒内理解价值、找不到路径、看不到可信度。文章把改版拆成一组可复制的“运营与工程交叉 checklist”：首页叙事链路、导航与入口、图表重绘、搜索替换、移动端细节、内容资产重组。推荐给想提升项目影响力的人：读完你能把“文档网站重构”从审美问题变成一套可验收的工程目标。",
+            "recommended_at": "2026-03-17T19:01:28.101+08:00"
+          },
+          {
+            "title": "泡沫消退后的冷思考：2026年，AI 工程师的真实生存图景",
+            "source": "Tony Bai",
+            "link": "https://tonybai.com/2026/03/17/ai-engineer-survival-2026-post-hype/",
+            "summary": "从一线招聘与开发者社区视角讨论“AI 工程师热潮”退潮后的现实：岗位供需并不乐观、工具依赖可能削弱基本功、技能折旧加速；并提出更长期的护城河在系统思维、数据治理、安全边界内用 AI、以及与现实世界结合的工程能力等。",
+            "reason": "这篇文章的好处在于“降温但不消极”：它不否认 AI 的趋势，但把注意力从追热点（框架/名词）拉回到更耐久的能力结构——理解业务与系统、能在约束内把 AI 变成手术刀、能应对不确定性与安全/数据边界。推荐给正在做职业规划或团队培养的人：你可以拿它当镜子，检查自己的学习投入是否过度集中在短周期工具链，是否还保留了可以跨模型、跨框架迁移的硬实力。",
+            "recommended_at": "2026-03-17T19:01:28.101+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-03-16T19:01:37.574+08:00",
       "check": "freshrss-digest",
