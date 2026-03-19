@@ -2,11 +2,62 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-03-18T19:10:31.438+08:00",
+    "updated_at": "2026-03-19T19:03:50.885+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-03-19T19:03:50.885+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：5 条推荐",
+      "edition": {
+        "title": "FreshRSS 内容推荐",
+        "items": [
+          {
+            "title": "这个悖论曾将聪明人划分为五五开，但现在情况变了",
+            "source": "银河美术馆 Gallery of Galaxy",
+            "link": "https://blog.yanli.one/why-more-people-one-box-newcomb-zh",
+            "summary": "作者通过严格的数学公式拆解纽科姆悖论（Newcomb's Paradox），探讨在「只拿神秘盒」与「两个都拿」之间，期望收益如何因「预测机预测准确率」而截然相反。文章指出 AI/LLM 时代让越来越多人直觉选择「单盒」，原因是现代人天天被推荐算法「读心」，对概率预测因果性的接受度已大幅提升。",
+            "reason": "这篇是难得一见的、用数学而非鸡汤来拆解经典哲学悖论的文章。作者不仅给出清晰的期望收益公式（f(x,y) = 10⁶·y - 10³·x + 10³），还解释了为何 LLM 时代让天平倾斜——当所有人都活在推荐算法的「读心术」里，「预测机预测我的选择」这件事不再是神学，而是每天都在发生的工程现实。认知跃迁的价值极高。",
+            "recommended_at": "2026-03-19T19:03:50.885+08:00"
+          },
+          {
+            "title": "别再无脑 go get @latest 了！你的服务器可能下一秒就被黑客接管",
+            "source": "Tony Bai",
+            "link": "https://tonybai.com/2026/03/19/proposal-support-dependency-cooldown-in-go-tooling/",
+            "summary": "文章围绕 Go 官方提案 Issue #76485（工具链支持依赖冷却期），深度剖析供应链投毒攻击的原理：黑客发布带毒新版本 → 全球代理同步 → 安全社区发现存在数天到数周的「致命时间差」。提案建议通过 SumDB 的密码学时间戳（首次观测时间）屏蔽发布过新的版本，让开发者自然「让子弹飞一会儿」。",
+            "reason": "供应链安全是 2024-2026 年最严峻的 DevSecOps 话题，但大多数文章只讲概念、不讲机制。本文罕见地完整交代了 Go 的三层防御体系（MVS 最小版本选择、SumDB 密码学校验、Cooldown 时间隔离），并有力论证了为何「@latest 狂热」实际上是在帮黑客做灰度测试。每个写 Go 的工程师都该理解这个提案背后的逻辑。",
+            "recommended_at": "2026-03-19T19:03:50.885+08:00"
+          },
+          {
+            "title": "为什么你的 AI Agent 总是像个智障？来自 Manus 大佬的 2 年血泪避坑指南",
+            "source": "Tony Bai",
+            "link": "https://tonybai.com/2026/03/18/why-ai-agents-act-stupid-manus-expert-pitfall-guide/",
+            "summary": "前 Manus 后端技术负责人 MorroHsu 在 Reddit 发文揭露：给大模型几十个 Typed Function Calls 工具，反而是 Agent 变智障的核心原因。他的解法反直觉却极优雅——废弃所有花里胡哨的工具，只给 AI 提供一个 run(command) 函数，让它用自己最熟悉的 CLI（Linux 命令行）去工作。配合渐进式发现、报错变向导、双层二进制隔离三大技巧，彻底解决认知过载与上下文污染问题。",
+            "reason": "这是一篇极其罕见的「顶级 Agent 实战者」亲述，而非套壳的框架介绍。核心洞察反直觉却令人信服：大模型在 GitHub、Stack Overflow 语料里泡大，CLI 才是它的母语而非你的 API。配合渐进式发现、防智障报错设计、二进制守卫三个实操技巧，这篇文章的实用价值远超大多数 AI Agent 教程。",
+            "recommended_at": "2026-03-19T19:03:50.885+08:00"
+          },
+          {
+            "title": "独立开发者自学四年开发的塔防游戏上架 Steam，查看销量发现盈利后喜极而泣",
+            "source": "Polygon",
+            "link": "https://www.polygon.com/2026/gaming/independent-developer-tangy-td-steam-sales",
+            "summary": "独立开发者 Cakez 四年前从零自学编程，在 Twitch 直播开发过程。期间电脑损坏、社区捐助零件，经历结婚生子后顶着巨大压力完成塔防 Roguelike 游戏《Tangy TD》。上线第二天销售额 31942 美元，几天后冲至 245123 美元，当众哭了出来。Polygon 指出 Steam 上约一半游戏从未赚过一毛钱，2025 年近 2 万款新游上架、仅约 600 款获得 1000 条以上评论。",
+            "reason": "这个故事之所以值得推荐，不只是「逆袭」的情感刺激，而在于它折射了独立游戏生态的冷酷真相：Cakez 的成功是极度稀缺的个例，背后是 99% 的沉默失败。Polygon 提供的数据（50% 的 Steam 游戏零收入、每年 2 万款新品上架）给了这个故事重量，让它从「感人事迹」升华为对独立开发经济的真实注脚。同时也让人思考：运气、算法推荐与社区支持，在一个人的命运里各占多少权重？",
+            "recommended_at": "2026-03-19T19:03:50.885+08:00"
+          },
+          {
+            "title": "白話文教學：AI 怎麼幫你操控軟體？API、CLI、MCP、瀏覽器控制的選擇邏輯",
+            "source": "雷蒙三十｜數位工作術",
+            "link": "https://raymondhouch.com/lifehacker/digital-workflow/how-ai-controls-software-api-cli-mcp-browser-use/",
+            "summary": "文章系统对比了 AI 控制软件的四种主流方式：原生 API（最精确但需要适配）、CLI（最通用，大模型最熟悉）、MCP（Model Context Protocol，标准化上下文协议）、浏览器控制（视觉级操作，最灵活但最慢）。作者给出清晰的决策树：需求精确程度 × 是否需要视觉理解 × 实时性要求，来帮助读者判断该选哪种方式。",
+            "reason": "市面上讲 AI 工具的文章要么太浅（只列工具名称），要么太深（只讲某一种技术细节）。这篇罕见地做到了横向对比四种控制方式的核心差异，并用决策树的形式给出实操判断逻辑。对于正在搭建 AI 工作流、或在研究 AI 编程工具的读者，这是目前最清晰的一篇入门框架。",
+            "recommended_at": "2026-03-19T19:03:50.885+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-03-18T19:10:31.438+08:00",
       "check": "freshrss-digest",
