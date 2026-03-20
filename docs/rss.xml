@@ -5,53 +5,26 @@
     <link>https://zhhbinn.github.io/rss-pick/</link>
     <description>公开版 RSS 内容推荐（增量更新）</description>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 19 Mar 2026 11:03:50 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2026 07:03:08 GMT</lastBuildDate>
     <generator>openclaw</generator>
     
     <item>
-      <title>这个悖论曾将聪明人划分为五五开，但现在情况变了</title>
-      <link>https://blog.yanli.one/why-more-people-one-box-newcomb-zh</link>
-      <guid isPermaLink="true">https://blog.yanli.one/why-more-people-one-box-newcomb-zh</guid>
-      <pubDate>Thu, 19 Mar 2026 11:03:50 GMT</pubDate>
-      <description>来源：银河美术馆 Gallery of Galaxy
-摘要：作者通过严格的数学公式拆解纽科姆悖论（Newcomb&apos;s Paradox），探讨在「只拿神秘盒」与「两个都拿」之间，期望收益如何因「预测机预测准确率」而截然相反。文章指出 AI/LLM 时代让越来越多人直觉选择「单盒」，原因是现代人天天被推荐算法「读心」，对概率预测因果性的接受度已大幅提升。
-上榜理由：这篇是难得一见的、用数学而非鸡汤来拆解经典哲学悖论的文章。作者不仅给出清晰的期望收益公式（f(x,y) = 10⁶·y - 10³·x + 10³），还解释了为何 LLM 时代让天平倾斜——当所有人都活在推荐算法的「读心术」里，「预测机预测我的选择」这件事不再是神学，而是每天都在发生的工程现实。认知跃迁的价值极高。</description>
-    </item>
-    <item>
-      <title>别再无脑 go get @latest 了！你的服务器可能下一秒就被黑客接管</title>
-      <link>https://tonybai.com/2026/03/19/proposal-support-dependency-cooldown-in-go-tooling/</link>
-      <guid isPermaLink="true">https://tonybai.com/2026/03/19/proposal-support-dependency-cooldown-in-go-tooling/</guid>
-      <pubDate>Thu, 19 Mar 2026 11:03:50 GMT</pubDate>
+      <title>如果服务器悄悄猝死，你的系统还能活几秒？揭秘分布式集群的续命保底机制</title>
+      <link>https://tonybai.com/2026/03/20/heartbeats-in-distributed-systems/</link>
+      <guid isPermaLink="true">https://tonybai.com/2026/03/20/heartbeats-in-distributed-systems/</guid>
+      <pubDate>Fri, 20 Mar 2026 07:03:08 GMT</pubDate>
       <description>来源：Tony Bai
-摘要：文章围绕 Go 官方提案 Issue #76485（工具链支持依赖冷却期），深度剖析供应链投毒攻击的原理：黑客发布带毒新版本 → 全球代理同步 → 安全社区发现存在数天到数周的「致命时间差」。提案建议通过 SumDB 的密码学时间戳（首次观测时间）屏蔽发布过新的版本，让开发者自然「让子弹飞一会儿」。
-上榜理由：供应链安全是 2024-2026 年最严峻的 DevSecOps 话题，但大多数文章只讲概念、不讲机制。本文罕见地完整交代了 Go 的三层防御体系（MVS 最小版本选择、SumDB 密码学校验、Cooldown 时间隔离），并有力论证了为何「@latest 狂热」实际上是在帮黑客做灰度测试。每个写 Go 的工程师都该理解这个提案背后的逻辑。</description>
+摘要：本文深入拆解分布式系统中心跳机制的设计哲学，从最基础的 Push/Pull 模型出发，逐步深入到 Cassandra 的 Phi (φ) 累积故障检测器、去中心化 Gossip 协议，以及脑裂（Split-brain）与 Quorum 法则的防御策略，并结合 Kubernetes、etcd 等实际开源项目讲解其落地实现。
+上榜理由：心跳机制是分布式系统中最经典也最容易被糙快猛实现的组件之一，大多数开发者只停留在设个超时时间的层面，却不了解这背后有大量精妙的工程权衡。本文从基础模型讲起，一路深入到 Phi 累积故障检测器（概率化判断节点生死的算法）和 Gossip 协议（无中心节点时如何通过八卦传播完成故障感知），最后还讲了脑裂与 Quorum 的物理学边界。内容硬核但讲得透彻，读完能让你对高可用架构的认知真正超越调参侠阶段。作为每天都和 Kubernetes、etcd 打交道的后端工程师，这篇文章是难得的能把为什么这么设计讲清楚的好文。</description>
     </item>
     <item>
-      <title>为什么你的 AI Agent 总是像个智障？来自 Manus 大佬的 2 年血泪避坑指南</title>
-      <link>https://tonybai.com/2026/03/18/why-ai-agents-act-stupid-manus-expert-pitfall-guide/</link>
-      <guid isPermaLink="true">https://tonybai.com/2026/03/18/why-ai-agents-act-stupid-manus-expert-pitfall-guide/</guid>
-      <pubDate>Thu, 19 Mar 2026 11:03:50 GMT</pubDate>
-      <description>来源：Tony Bai
-摘要：前 Manus 后端技术负责人 MorroHsu 在 Reddit 发文揭露：给大模型几十个 Typed Function Calls 工具，反而是 Agent 变智障的核心原因。他的解法反直觉却极优雅——废弃所有花里胡哨的工具，只给 AI 提供一个 run(command) 函数，让它用自己最熟悉的 CLI（Linux 命令行）去工作。配合渐进式发现、报错变向导、双层二进制隔离三大技巧，彻底解决认知过载与上下文污染问题。
-上榜理由：这是一篇极其罕见的「顶级 Agent 实战者」亲述，而非套壳的框架介绍。核心洞察反直觉却令人信服：大模型在 GitHub、Stack Overflow 语料里泡大，CLI 才是它的母语而非你的 API。配合渐进式发现、防智障报错设计、二进制守卫三个实操技巧，这篇文章的实用价值远超大多数 AI Agent 教程。</description>
-    </item>
-    <item>
-      <title>独立开发者自学四年开发的塔防游戏上架 Steam，查看销量发现盈利后喜极而泣</title>
-      <link>https://www.polygon.com/2026/gaming/independent-developer-tangy-td-steam-sales</link>
-      <guid isPermaLink="true">https://www.polygon.com/2026/gaming/independent-developer-tangy-td-steam-sales</guid>
-      <pubDate>Thu, 19 Mar 2026 11:03:50 GMT</pubDate>
-      <description>来源：Polygon
-摘要：独立开发者 Cakez 四年前从零自学编程，在 Twitch 直播开发过程。期间电脑损坏、社区捐助零件，经历结婚生子后顶着巨大压力完成塔防 Roguelike 游戏《Tangy TD》。上线第二天销售额 31942 美元，几天后冲至 245123 美元，当众哭了出来。Polygon 指出 Steam 上约一半游戏从未赚过一毛钱，2025 年近 2 万款新游上架、仅约 600 款获得 1000 条以上评论。
-上榜理由：这个故事之所以值得推荐，不只是「逆袭」的情感刺激，而在于它折射了独立游戏生态的冷酷真相：Cakez 的成功是极度稀缺的个例，背后是 99% 的沉默失败。Polygon 提供的数据（50% 的 Steam 游戏零收入、每年 2 万款新品上架）给了这个故事重量，让它从「感人事迹」升华为对独立开发经济的真实注脚。同时也让人思考：运气、算法推荐与社区支持，在一个人的命运里各占多少权重？</description>
-    </item>
-    <item>
-      <title>白話文教學：AI 怎麼幫你操控軟體？API、CLI、MCP、瀏覽器控制的選擇邏輯</title>
-      <link>https://raymondhouch.com/lifehacker/digital-workflow/how-ai-controls-software-api-cli-mcp-browser-use/</link>
-      <guid isPermaLink="true">https://raymondhouch.com/lifehacker/digital-workflow/how-ai-controls-software-api-cli-mcp-browser-use/</guid>
-      <pubDate>Thu, 19 Mar 2026 11:03:50 GMT</pubDate>
-      <description>来源：雷蒙三十｜數位工作術
-摘要：文章系统对比了 AI 控制软件的四种主流方式：原生 API（最精确但需要适配）、CLI（最通用，大模型最熟悉）、MCP（Model Context Protocol，标准化上下文协议）、浏览器控制（视觉级操作，最灵活但最慢）。作者给出清晰的决策树：需求精确程度 × 是否需要视觉理解 × 实时性要求，来帮助读者判断该选哪种方式。
-上榜理由：市面上讲 AI 工具的文章要么太浅（只列工具名称），要么太深（只讲某一种技术细节）。这篇罕见地做到了横向对比四种控制方式的核心差异，并用决策树的形式给出实操判断逻辑。对于正在搭建 AI 工作流、或在研究 AI 编程工具的读者，这是目前最清晰的一篇入门框架。</description>
+      <title>在日本买房如何快速了解一个地址的周边环境</title>
+      <link>https://evjp.life/p/387.html</link>
+      <guid isPermaLink="true">https://evjp.life/p/387.html</guid>
+      <pubDate>Fri, 20 Mar 2026 07:03:08 GMT</pubDate>
+      <description>来源：EV 的日本生活记录
+摘要：作者在看房过程中发现每个新地址都要重复大量调研工作，于是用 Vibe Coding（AI 辅助编程）开发了 BukkenAI 这个工具，输入一个日本地址即可自动完成交通、生活便利、医疗、教育、灾害风险、房价走势六大维度的分析，并生成可视化报告。
+上榜理由：这篇文章实际上有两个价值叠加：第一，它是 AI 编程工作流（Vibe Coding）的优秀实践案例——作者用 Claude Code 快速迭代，从真实痛点出发，两三周就做出了一个完整可用的产品（FastAPI + Next.js + PostGIS + Google Maps API + Claude），技术栈组合和迭代路径都很值得参考。第二，它还是一个非常实用的在日本买房租房时的选址工具介绍，BukkenAI.com 这个产品本身就能直接使用，整合了日本国土交通省的灾害风险图数据和真实房价数据，对需要在日本看房的人来说很有价值。内容既有方法论（Vibe Coding 怎么做），又有实操价值（工具怎么用），两者结合得很好。</description>
     </item>
   </channel>
 </rss>
