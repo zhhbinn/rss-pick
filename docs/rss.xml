@@ -5,26 +5,26 @@
     <link>https://zhhbinn.github.io/rss-pick/</link>
     <description>公开版 RSS 内容推荐（增量更新）</description>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 20 Mar 2026 07:03:08 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2026 07:02:56 GMT</lastBuildDate>
     <generator>openclaw</generator>
     
     <item>
-      <title>如果服务器悄悄猝死，你的系统还能活几秒？揭秘分布式集群的续命保底机制</title>
-      <link>https://tonybai.com/2026/03/20/heartbeats-in-distributed-systems/</link>
-      <guid isPermaLink="true">https://tonybai.com/2026/03/20/heartbeats-in-distributed-systems/</guid>
-      <pubDate>Fri, 20 Mar 2026 07:03:08 GMT</pubDate>
-      <description>来源：Tony Bai
-摘要：本文深入拆解分布式系统中心跳机制的设计哲学，从最基础的 Push/Pull 模型出发，逐步深入到 Cassandra 的 Phi (φ) 累积故障检测器、去中心化 Gossip 协议，以及脑裂（Split-brain）与 Quorum 法则的防御策略，并结合 Kubernetes、etcd 等实际开源项目讲解其落地实现。
-上榜理由：心跳机制是分布式系统中最经典也最容易被糙快猛实现的组件之一，大多数开发者只停留在设个超时时间的层面，却不了解这背后有大量精妙的工程权衡。本文从基础模型讲起，一路深入到 Phi 累积故障检测器（概率化判断节点生死的算法）和 Gossip 协议（无中心节点时如何通过八卦传播完成故障感知），最后还讲了脑裂与 Quorum 的物理学边界。内容硬核但讲得透彻，读完能让你对高可用架构的认知真正超越调参侠阶段。作为每天都和 Kubernetes、etcd 打交道的后端工程师，这篇文章是难得的能把为什么这么设计讲清楚的好文。</description>
+      <title>如果拿 token 抵工资会发生什么？</title>
+      <link>https://blog.est.im/2026/stderr-08</link>
+      <guid isPermaLink="true">https://blog.est.im/2026/stderr-08</guid>
+      <pubDate>Sat, 21 Mar 2026 07:02:56 GMT</pubDate>
+      <description>来源：est の 输入 输出和出入
+摘要：从黄仁勋「配一半薪资Token」的暴论出发，作者脑洞大开：如果未来用 token（AI 的工作量单位）来代替货币发工资，这个世界会怎样？文章引入了 Kolmogorov 复杂度（柯氏复杂度）作为 token 的价值锚定理论，并探讨了 token 作为「负熵」度量、算法压缩与文明秩序的关系，以及 AI 时代人类劳动价值的重新定义。
+上榜理由：这是一篇极其罕见的跨界思想实验：它把货币理论、复杂度理论、热力学和 AI 发展融合在一起，提出「token 本质上是负熵的度量」这一全新视角。没有晦涩公式，全篇靠逻辑推演支撑，读起来像一篇哲学散文，却又扎根于可证伪的理论框架。无论你认同不认同它的结论，这篇文章能强迫你重新审视「工资」「货币」「价值」这些习以为常的概念——这就是好思想实验的标准：它改变你看世界的方式，而不是给你一个新的知识点。</description>
     </item>
     <item>
-      <title>在日本买房如何快速了解一个地址的周边环境</title>
-      <link>https://evjp.life/p/387.html</link>
-      <guid isPermaLink="true">https://evjp.life/p/387.html</guid>
-      <pubDate>Fri, 20 Mar 2026 07:03:08 GMT</pubDate>
-      <description>来源：EV 的日本生活记录
-摘要：作者在看房过程中发现每个新地址都要重复大量调研工作，于是用 Vibe Coding（AI 辅助编程）开发了 BukkenAI 这个工具，输入一个日本地址即可自动完成交通、生活便利、医疗、教育、灾害风险、房价走势六大维度的分析，并生成可视化报告。
-上榜理由：这篇文章实际上有两个价值叠加：第一，它是 AI 编程工作流（Vibe Coding）的优秀实践案例——作者用 Claude Code 快速迭代，从真实痛点出发，两三周就做出了一个完整可用的产品（FastAPI + Next.js + PostGIS + Google Maps API + Claude），技术栈组合和迭代路径都很值得参考。第二，它还是一个非常实用的在日本买房租房时的选址工具介绍，BukkenAI.com 这个产品本身就能直接使用，整合了日本国土交通省的灾害风险图数据和真实房价数据，对需要在日本看房的人来说很有价值。内容既有方法论（Vibe Coding 怎么做），又有实操价值（工具怎么用），两者结合得很好。</description>
+      <title>你的 Go 报错信息正在出卖你！扒一扒大厂是如何做错误隔离与日志脱敏的</title>
+      <link>https://tonybai.com/2026/03/21/best-practices-for-secure-error-handling-in-go/</link>
+      <guid isPermaLink="true">https://tonybai.com/2026/03/21/best-practices-for-secure-error-handling-in-go/</guid>
+      <pubDate>Sat, 21 Mar 2026 07:02:56 GMT</pubDate>
+      <description>来源：Tony Bai
+摘要：JetBrains GoLand 官方博客近期发布重磅安全警告：Go 错误包装（fmt.Errorf %w）在微服务场景下会沿调用链向上暴露数据库类型、表名、SQL 语法等核心机密。本文详解 SafeError 结构体设计、Opaque Wrapping（不透明包装）原则，以及 log/slog 结构化日志+Redact 接口的脱敏实战方法，并附 CVE-2025-7445 等真实漏洞案例佐证。
+上榜理由：这是近期最具实战价值的 Go 安全加固指南。文章的核心洞察一针见血：Go 错误处理的设计哲学（错误即普通值）恰恰在微服务信任边界处成为最大漏洞——一段看似优雅的 fmt.Errorf(&quot;%w&quot;, err) 可以让黑客通过 errors.As() 逐层扒下数据库类型、表名甚至 Service Account Token。文章给出了完整解法：SafeError 双向隔离（内部保留原始错误打日志，对外只吐 UserMsg）、Opaque Wrapping 切断调用链、Redact 接口防止结构体日志泄露。不止授人以渔，还通过 CVE 案例讲清了「为什么必须这么做」。</description>
     </item>
   </channel>
 </rss>

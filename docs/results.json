@@ -2,11 +2,38 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-03-20T15:03:08.850+08:00",
+    "updated_at": "2026-03-21T15:02:56.557+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-03-21T15:02:56.557+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：2 条推荐",
+      "edition": {
+        "title": "FreshRSS 内容推荐",
+        "items": [
+          {
+            "title": "如果拿 token 抵工资会发生什么？",
+            "source": "est の 输入 输出和出入",
+            "link": "https://blog.est.im/2026/stderr-08",
+            "summary": "从黄仁勋「配一半薪资Token」的暴论出发，作者脑洞大开：如果未来用 token（AI 的工作量单位）来代替货币发工资，这个世界会怎样？文章引入了 Kolmogorov 复杂度（柯氏复杂度）作为 token 的价值锚定理论，并探讨了 token 作为「负熵」度量、算法压缩与文明秩序的关系，以及 AI 时代人类劳动价值的重新定义。",
+            "reason": "这是一篇极其罕见的跨界思想实验：它把货币理论、复杂度理论、热力学和 AI 发展融合在一起，提出「token 本质上是负熵的度量」这一全新视角。没有晦涩公式，全篇靠逻辑推演支撑，读起来像一篇哲学散文，却又扎根于可证伪的理论框架。无论你认同不认同它的结论，这篇文章能强迫你重新审视「工资」「货币」「价值」这些习以为常的概念——这就是好思想实验的标准：它改变你看世界的方式，而不是给你一个新的知识点。",
+            "recommended_at": "2026-03-21T15:02:56.557+08:00"
+          },
+          {
+            "title": "你的 Go 报错信息正在出卖你！扒一扒大厂是如何做错误隔离与日志脱敏的",
+            "source": "Tony Bai",
+            "link": "https://tonybai.com/2026/03/21/best-practices-for-secure-error-handling-in-go/",
+            "summary": "JetBrains GoLand 官方博客近期发布重磅安全警告：Go 错误包装（fmt.Errorf %w）在微服务场景下会沿调用链向上暴露数据库类型、表名、SQL 语法等核心机密。本文详解 SafeError 结构体设计、Opaque Wrapping（不透明包装）原则，以及 log/slog 结构化日志+Redact 接口的脱敏实战方法，并附 CVE-2025-7445 等真实漏洞案例佐证。",
+            "reason": "这是近期最具实战价值的 Go 安全加固指南。文章的核心洞察一针见血：Go 错误处理的设计哲学（错误即普通值）恰恰在微服务信任边界处成为最大漏洞——一段看似优雅的 fmt.Errorf(\"%w\", err) 可以让黑客通过 errors.As() 逐层扒下数据库类型、表名甚至 Service Account Token。文章给出了完整解法：SafeError 双向隔离（内部保留原始错误打日志，对外只吐 UserMsg）、Opaque Wrapping 切断调用链、Redact 接口防止结构体日志泄露。不止授人以渔，还通过 CVE 案例讲清了「为什么必须这么做」。",
+            "recommended_at": "2026-03-21T15:02:56.557+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-03-20T15:03:08.850+08:00",
       "check": "freshrss-digest",
