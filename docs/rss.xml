@@ -5,26 +5,26 @@
     <link>https://zhhbinn.github.io/rss-pick/</link>
     <description>公开版 RSS 内容推荐（增量更新）</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 22 Mar 2026 07:02:46 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 07:03:19 GMT</lastBuildDate>
     <generator>openclaw</generator>
     
     <item>
-      <title>看了 100 小时教程，你为什么依然写不好代码？扒开技术人的“成长环”真相</title>
-      <link>https://tonybai.com/2026/03/22/stop-tactical-diligence-start-stretch-zone-growth/</link>
-      <guid isPermaLink="true">https://tonybai.com/2026/03/22/stop-tactical-diligence-start-stretch-zone-growth/</guid>
-      <pubDate>Sun, 22 Mar 2026 07:02:46 GMT</pubDate>
-      <description>来源：Tony Bai
-摘要：借用《认知觉醒》的核心框架，系统拆解了技术人为何陷入“教程地狱”：在学习量、思考量、行动量、改变量这个金字塔里，绝大多数人的努力只堆到了最底层。提出了“拉伸区”概念——介于舒适区和困难区之间的那个窄带，才是真正产生成长的地方，并以 Go 高并发压测工具和本地知识库 Agent 两个实战案例，手把手演示了如何设计拉伸区项目。
-上榜理由：这是一篇极其稀缺的技术成长方法论文章。不同于大多数只给结论不给路径的鸡汤，它从认知科学出发，完整解释了“为什么你学了很多却进步缓慢”的根本原因，并给出了可操作的解决方案。两个案例（Go 并发工具 + AI Agent 工具编排）都足够具体，读者完全可以照着复制。最难得的是，它没有用 AI 焦虑来制造紧迫感，而是老老实实讲方法——这对技术人的实际帮助远大于情绪煽动。</description>
+      <title>从日本米市到全球金融：K 线图的前世今生与看盘入门</title>
+      <link>https://evjp.life/p/392.html</link>
+      <guid isPermaLink="true">https://evjp.life/p/392.html</guid>
+      <pubDate>Mon, 23 Mar 2026 07:03:19 GMT</pubDate>
+      <description>来源：EV 的日本生活记录
+摘要：K 线图（蜡烛图）起源于十八世纪日本德川幕府时代的大米交易市场，发明者是著名米商本间宗久。这篇长文系统梳理了 K 线图三百年的演进历程：从大阪堂岛大米会所的期货交易起源，到本间宗久总结的「酒田五法」交易体系；解释了为何中文世界称其为「K 线」（源自日语「罫线」的音译，而非英文 Candle）；详细对比了全球各地对涨跌颜色的不同惯例（红涨绿跌 vs 绿涨红跌）；并深入介绍了单根 K 线形态（锤头线、射击之星、十字星等）以及 K 线组合分析的基本方法。
+上榜理由：这篇文章是难得一见的「深度历史＋实战技术」复合型内容。难得之处在于：它同时满足了三个层次的需求——历史爱好者能看到十八世纪日本米商如何用《孙子兵法》的智慧做交易，文化研究者能理解「K 线」这个译名的来龙去脉（戳破了国内教材中流传甚广的错误说法），而刚入门的投资者则能得到实用的 K 线形态入门指南。更难得的是，作者还将技术分析与局限性的反思结合起来，没有把 K 线神话化，是一篇有温度、有深度、有态度的内容。适合任何对金融、市场文化或技术分析感兴趣的人阅读。</description>
     </item>
     <item>
-      <title>claw会代替员工？</title>
-      <link>https://blog.est.im/2026/stderr-09</link>
-      <guid isPermaLink="true">https://blog.est.im/2026/stderr-09</guid>
-      <pubDate>Sun, 22 Mar 2026 07:02:46 GMT</pubDate>
-      <description>来源：est の 输入 输出和出入
-摘要：作者从王自如提出“Agent会完成个体到数字化资产的转移，员工将变成 disposable”的观点出发，提出了“反未来”反驳：职场老油条一旦把 Agent 用得飞起，几年内沉淀下来的屎山配置、方言、DSL、灵机一动的 prompt，就没人敢接手——越平庸的员工越容易被萃取，越强的员工造屎山的效率越高。进而提出 OPC（单人公司）路径下，数据的独占性和创始人的“审美与判准”才是真正的护城河。
-上榜理由：这篇文章罕见地提供了两个真正有价值的对立视角，而非简单的“AI好棒”或“AI危险”。核心洞察——屎山是 seniority 的真正护城河，Agent 越强大，「共识」分裂得越快——是任何一个在实际团队工作过的人都能验证的真观察，读来既犀利又有共鸣。尤其是对 OPC 的思考（数据独占性 + 创始人判准），对正在探索 AI Native 创业路径的读者有直接的参考价值。</description>
+      <title>OpenAI 创始人盛赞 Rust，却遭开发者反驳：Go 才是大模型眼里的「香饽饽」！</title>
+      <link>https://tonybai.com/2026/03/23/go-is-the-best-programming-language-for-llm/</link>
+      <guid isPermaLink="true">https://tonybai.com/2026/03/23/go-is-the-best-programming-language-for-llm/</guid>
+      <pubDate>Mon, 23 Mar 2026 07:03:19 GMT</pubDate>
+      <description>来源：Tony Bai
+摘要：OpenAI 总裁 Greg Brockman 公开表示「Rust 是开发 Agent 的完美语言，因为只要能编译通过就基本正确」。然而开发者 Emil Privér 提出了尖锐反驳：当大模型遇到 Rust 复杂的生命周期和所有权报错时，它们会偷偷用 unsafe {} 或 .unwrap() 绕过编译器安全检查，「你在指望编译器兜底，大模型却在底下悄悄开了后门」。文章进一步指出，Go 语言之所以在大模型时代反而成为「香饽饽」，恰恰是因为它极度「无聊」——没有花里胡哨的语法糖、强制 gofmt 格式化、关键字极少，…
+上榜理由：这篇内容的价值在于它挑战了技术圈一个看似「理所当然」的结论（Brockman 作为 OpenAI 核心人物的发言天然具有权威性），并用具体机制分析反驳它，读来令人信服。更深层的洞察是：人类眼中「无趣、啰嗦」的 Go 语言特性，在大模型这个「无情的概率预测机器」眼中反而是最大的优势——这个反直觉的视角非常有启发性。文章还涉及了编程语言设计哲学的讨论，适合所有关心 AI 编程实践和语言设计的开发者阅读，是少有的能把「语言战争」话题讲出深度而不流于口水战的技术好文。</description>
     </item>
   </channel>
 </rss>
