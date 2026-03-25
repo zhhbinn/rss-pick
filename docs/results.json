@@ -2,11 +2,38 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-03-24T15:03:55.561+08:00",
+    "updated_at": "2026-03-25T15:04:14.660+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-03-25T15:04:14.660+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：2 条推荐",
+      "edition": {
+        "title": "FreshRSS 内容推荐",
+        "items": [
+          {
+            "title": "Go 语言之父亲自下场道歉：藏在 Spec 里的十年\"笔误\"，终于要修正了！",
+            "source": "Tony Bai",
+            "link": "https://tonybai.com/2026/03/25/go-spec-contradiction-in-types-section/",
+            "summary": "Go 语言 Spec 中 bool 被同时描述为\"预声明类型\"和\"已定义类型\"，社区争论后 Go 语言之父 Robert Griesemer 亲自用拉丁语写下\"Mea culpa\"认错并提交修复方案。",
+            "reason": "这不是普通 bug 修复，而是 Go 十年技术债的完整解剖——从 Go 1.0 到 1.18 类型别名和泛型的演进历史，看完才能真正理解 bool 为何不能绑定方法、~string 和 string 为什么不是一回事，技术人必读。",
+            "recommended_at": "2026-03-25T15:04:14.660+08:00"
+          },
+          {
+            "title": "苏州为什么没有机场？",
+            "source": "Chon's Blog",
+            "link": "https://ichon.me/post/1039.html",
+            "summary": "苏州 GDP 全国第六却没有民用机场，文章从空域管制、财税制度、GDP 晋升锦标赛、城市间零和博弈等维度，系统拆解了这个\"结构性囚徒困境\"。",
+            "reason": "文章横向对比美国（特别目的区、州际协定机构）和日本（私铁跨城运营）的跨界治理机制，指出中国同时缺乏几乎所有已知的缓冲工具——是理解中国地方治理逻辑的一把钥匙，值得细读。",
+            "recommended_at": "2026-03-25T15:04:14.660+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-03-24T15:03:55.561+08:00",
       "check": "freshrss-digest",

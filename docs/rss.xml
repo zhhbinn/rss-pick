@@ -5,26 +5,26 @@
     <link>https://zhhbinn.github.io/rss-pick/</link>
     <description>公开版 RSS 内容推荐（增量更新）</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 24 Mar 2026 07:03:55 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2026 07:04:14 GMT</lastBuildDate>
     <generator>openclaw</generator>
     
     <item>
-      <title>告别古法编程黄金时代：AI 时代不会再有新编程语言诞生的土壤</title>
-      <link>https://tonybai.com/2026/03/24/no-soil-for-new-programming-languages-in-ai-era/</link>
-      <guid isPermaLink="true">https://tonybai.com/2026/03/24/no-soil-for-new-programming-languages-in-ai-era/</guid>
-      <pubDate>Tue, 24 Mar 2026 07:03:55 GMT</pubDate>
+      <title>Go 语言之父亲自下场道歉：藏在 Spec 里的十年&quot;笔误&quot;，终于要修正了！</title>
+      <link>https://tonybai.com/2026/03/25/go-spec-contradiction-in-types-section/</link>
+      <guid isPermaLink="true">https://tonybai.com/2026/03/25/go-spec-contradiction-in-types-section/</guid>
+      <pubDate>Wed, 25 Mar 2026 07:04:14 GMT</pubDate>
       <description>来源：Tony Bai
-摘要：作者从技术演进第一性原理出发，论证了一个反直觉却令人信服的结论：大模型时代，一门新编程语言几乎不可能成功。原因在于语料霸权——主流语言（Python、Go、Rust等）在 GitHub 上积累的海量代码喂饱了 AI，让 AI 对这些语言的补全和推理能力极强；而新语言面临没人写、没有语料、AI 不会写、人类不想学、更没人写的马太死局。此外，当 AI 能不知疲倦地处理最繁琐的语法时，让人类写得更舒服这一发明新语言的最大动机也消失了。文章还预测了未来两极化：上层是自然语言成为终极编程语言，下层是 AI 专属的中间表示语言…
-上榜理由：这篇文章的洞察相当犀利——它不是在讨论哪个语言更好，而是在拆解整个发明新语言这个行为在 AI 时代的逻辑前提。作者指出：人类发明新语言的原始动力是人脑带宽有限，需要更安全、更简洁的语法来减轻认知负担；但当 AI 成为实际执笔的那个 hammers，斧头是否锋利对人类来说就不再重要了。更值得深思的是那句「定义目标的造物主，永远比精通语法的泥瓦匠更稀缺」——在 AI 时代，真正稀缺的不再是编码能力，而是清晰表达意图、写出精准约束 AI 的 Spec 的能力。对于所有正在适应 AI 编程浪潮的开发者来说，这篇文章提供了一个很好的元认知框架：不要把精力继续押注在哪个语言更优雅上，而是要锻炼系统思维和抽象建模能力。这个观点和 Karpathy 所说的 Software 2.0 以数据为王一脉相承，但 Tony Bai 把…</description>
+摘要：Go 语言 Spec 中 bool 被同时描述为&quot;预声明类型&quot;和&quot;已定义类型&quot;，社区争论后 Go 语言之父 Robert Griesemer 亲自用拉丁语写下&quot;Mea culpa&quot;认错并提交修复方案。
+上榜理由：这不是普通 bug 修复，而是 Go 十年技术债的完整解剖——从 Go 1.0 到 1.18 类型别名和泛型的演进历史，看完才能真正理解 bool 为何不能绑定方法、~string 和 string 为什么不是一回事，技术人必读。</description>
     </item>
     <item>
-      <title>特斯拉第一次长途驾驶体验</title>
-      <link>https://blog.forecho.com/first-tesla-long-distance-driving.html</link>
-      <guid isPermaLink="true">https://blog.forecho.com/first-tesla-long-distance-driving.html</guid>
-      <pubDate>Tue, 24 Mar 2026 07:03:55 GMT</pubDate>
-      <description>来源：forecho&apos;s Blog
-摘要：作者完整复盘了从深圳开回武汉（单程约1000公里）的特斯拉长途驾驶经历，涵盖了行程规划、辅助驾驶体验、夜间高速行车、充电与续航策略、服务区餐饮、以及带两岁宝宝出行等真实细节。文中有不少宝贵的反面教训，如边开车边操作手机的危险经历、电量掉到 2% 的严重错误、以及充电桩实际只能充到 90% 的行业秘密。
-上榜理由：这是一篇极其接地气的特斯拉真实用车报告，不是充值评测，也不是参数对比，而是新手第一次开电车长途回家 的完整踩坑复盘。最有价值的是那些教科书不会写的经验：高速服务区的第三方充电桩实际上有意限制充到 90%（为了翻台率）、双车道高速比三车道驾驶体验差距极大、特斯拉导航有时不显示服务区的 bug 解决方案、电量一定要保留 20% 以上而非刚好够到目的地等。这些细节来自真实经历，真实可信。另一个加分项是，作者如实记录了边开车边操作手机导致车轮毂刮到马路牙子的惊险一幕，这种自我披露让整篇内容更有血有肉，也更有警示价值。对于考虑购买电动车或经常有长途出行需求的人来说，这是一篇不可多得的实战参考。</description>
+      <title>苏州为什么没有机场？</title>
+      <link>https://ichon.me/post/1039.html</link>
+      <guid isPermaLink="true">https://ichon.me/post/1039.html</guid>
+      <pubDate>Wed, 25 Mar 2026 07:04:14 GMT</pubDate>
+      <description>来源：Chon&apos;s Blog
+摘要：苏州 GDP 全国第六却没有民用机场，文章从空域管制、财税制度、GDP 晋升锦标赛、城市间零和博弈等维度，系统拆解了这个&quot;结构性囚徒困境&quot;。
+上榜理由：文章横向对比美国（特别目的区、州际协定机构）和日本（私铁跨城运营）的跨界治理机制，指出中国同时缺乏几乎所有已知的缓冲工具——是理解中国地方治理逻辑的一把钥匙，值得细读。</description>
     </item>
   </channel>
 </rss>
