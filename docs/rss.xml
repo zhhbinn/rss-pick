@@ -5,26 +5,26 @@
     <link>https://zhhbinn.github.io/rss-pick/</link>
     <description>公开版 RSS 内容推荐（增量更新）</description>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 Mar 2026 07:04:03 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2026 07:04:22 GMT</lastBuildDate>
     <generator>openclaw</generator>
     
     <item>
-      <title>去营地整点 FLAC</title>
-      <link>https://www.geedea.pro/article/got-flac/</link>
-      <guid isPermaLink="true">https://www.geedea.pro/article/got-flac/</guid>
-      <pubDate>Thu, 26 Mar 2026 07:04:03 GMT</pubDate>
-      <description>来源：極客死亡計劃
-摘要：一篇超长技术杂谈，从 FLAC 音频格式的诞生背景讲起，系统对比了有损/无损压缩、开放格式 vs DRM 封闭格式的哲学差异，并延伸到流媒体响度战争、Bandcamp 独立音乐生态、以及作者为何放弃流媒体转向本地 FLAC 收藏的完整心路历程。
-上榜理由：这篇文章信息密度极高，从音频编码原理到数字版权伦理，从技术细节到个人生活方式的选择，覆盖面远超普通「科普文」；特别适合对开放生态、数字权益、以及独立音乐有好奇心的读者，是难得一见的思想型技术长文。</description>
+      <title>那台借来的相机，救活了一家公司 (Airbnb的创业故事)</title>
+      <link>https://topstip.com/that-borrowed-camera-saved-a-company-airbnbs-startup-story/</link>
+      <guid isPermaLink="true">https://topstip.com/that-borrowed-camera-saved-a-company-airbnbs-startup-story/</guid>
+      <pubDate>Fri, 27 Mar 2026 07:04:22 GMT</pubDate>
+      <description>来源：TopsTip
+摘要：2009年，Airbnb三个创始人账上只剩200美元，产品上线却无人问津。Chesky没有坐在旧金山改代码，而是飞往纽约，挨家挨户敲门——发现房源照片竟是转化率暴跌的元凶。他从酒店前台借来一台专业相机，第二天重新拍摄，当周这套房就被订满。结论振聋发聩：「用户不是在选房间，是在选一个他能不能想象自己走进去的画面。」
+上榜理由：这不只是创业故事，更是一堂关于「用户视角」的反直觉课——硅谷所有人都在追求可规模化的高招，而Airbnb靠的是最不可规模化的「敲门+借相机」。Paul Graham那句「Do things that don&apos;t scale」被它演绎得淋漓尽致，无论你是产品经理、开发者还是运营，都能从中照见自己工作中的那张「烂照片」。</description>
     </item>
     <item>
-      <title>Rust 核心团队大吐苦水：求求你们别再用 AI 提交“垃圾 PR”了！</title>
-      <link>https://tonybai.com/2026/03/26/rust-project-perspectives-on-ai/</link>
-      <guid isPermaLink="true">https://tonybai.com/2026/03/26/rust-project-perspectives-on-ai/</guid>
-      <pubDate>Thu, 26 Mar 2026 07:04:03 GMT</pubDate>
+      <title>Rust 看了流泪，AI 看了沉默：扒开 Go 泛型最让你抓狂的「残疾」类型推断</title>
+      <link>https://tonybai.com/2026/03/27/function-type-inference-should-work-in-all-assignment-contexts/</link>
+      <guid isPermaLink="true">https://tonybai.com/2026/03/27/function-type-inference-should-work-in-all-assignment-contexts/</guid>
+      <pubDate>Fri, 27 Mar 2026 07:04:22 GMT</pubDate>
       <description>来源：Tony Bai
-摘要：继 Go 团队拒绝 AI 署名之后，Rust 核心开发者、语言设计团队负责人 Niko Matsakis 发起了大规模内部调研，汇总了 Rust 维护者对 AI 编程工具的真实看法，揭示了开源社区正被大量低质量 AI 生成代码压垮的严峻现实，并提出多项防御性策略。
-上榜理由：文章深度剖析了「AI 编程繁荣」背后的核心矛盾：维护者的无偿劳动被 AI 传声筒式的 PR 消耗殆尽，并给出了可操作的解决思路（信任网、免责声明、AI 门卫），对任何参与开源或使用 AI 辅助编程的开发者都有重要警示意义。</description>
+摘要：Go 1.18 引入泛型后，类型推断时灵时不灵：赋值 `s.f = g` 能自动推断出 `g[int]`，但结构体字面量 `S{f: g}` 却报错「不能在没有实例化的情况下使用泛型函数」。连「Go 语言之父之一」Robert Griesemer 都亲自在 GitHub 提 Issue，承认这是语言规范层面的设计缺陷，而非编译器 Bug。
+上榜理由：这个「薛定谔式推断」坑过无数开发者，也让 AI 代码生成工具频频翻车——AI 觉得上下文足够明确，偏偏 Go 编译器不买账。官方已正式接受修复方案，有望在后续版本中统一所有赋值上下文的类型推断，是 Go 泛型体验即将迎来实质性改善的重要信号，Go 开发者值得关注。</description>
     </item>
   </channel>
 </rss>

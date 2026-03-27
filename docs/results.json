@@ -2,11 +2,38 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-03-26T15:04:03.821+08:00",
+    "updated_at": "2026-03-27T15:04:22.162+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-03-27T15:04:22.162+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：2 条推荐",
+      "edition": {
+        "title": "FreshRSS 内容推荐",
+        "items": [
+          {
+            "title": "那台借来的相机，救活了一家公司 (Airbnb的创业故事)",
+            "source": "TopsTip",
+            "link": "https://topstip.com/that-borrowed-camera-saved-a-company-airbnbs-startup-story/",
+            "summary": "2009年，Airbnb三个创始人账上只剩200美元，产品上线却无人问津。Chesky没有坐在旧金山改代码，而是飞往纽约，挨家挨户敲门——发现房源照片竟是转化率暴跌的元凶。他从酒店前台借来一台专业相机，第二天重新拍摄，当周这套房就被订满。结论振聋发聩：「用户不是在选房间，是在选一个他能不能想象自己走进去的画面。」",
+            "reason": "这不只是创业故事，更是一堂关于「用户视角」的反直觉课——硅谷所有人都在追求可规模化的高招，而Airbnb靠的是最不可规模化的「敲门+借相机」。Paul Graham那句「Do things that don't scale」被它演绎得淋漓尽致，无论你是产品经理、开发者还是运营，都能从中照见自己工作中的那张「烂照片」。",
+            "recommended_at": "2026-03-27T15:04:22.162+08:00"
+          },
+          {
+            "title": "Rust 看了流泪，AI 看了沉默：扒开 Go 泛型最让你抓狂的「残疾」类型推断",
+            "source": "Tony Bai",
+            "link": "https://tonybai.com/2026/03/27/function-type-inference-should-work-in-all-assignment-contexts/",
+            "summary": "Go 1.18 引入泛型后，类型推断时灵时不灵：赋值 `s.f = g` 能自动推断出 `g[int]`，但结构体字面量 `S{f: g}` 却报错「不能在没有实例化的情况下使用泛型函数」。连「Go 语言之父之一」Robert Griesemer 都亲自在 GitHub 提 Issue，承认这是语言规范层面的设计缺陷，而非编译器 Bug。",
+            "reason": "这个「薛定谔式推断」坑过无数开发者，也让 AI 代码生成工具频频翻车——AI 觉得上下文足够明确，偏偏 Go 编译器不买账。官方已正式接受修复方案，有望在后续版本中统一所有赋值上下文的类型推断，是 Go 泛型体验即将迎来实质性改善的重要信号，Go 开发者值得关注。",
+            "recommended_at": "2026-03-27T15:04:22.162+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-03-26T15:04:03.821+08:00",
       "check": "freshrss-digest",
