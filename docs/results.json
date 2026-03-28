@@ -2,11 +2,38 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-03-27T17:27:57.906+08:00",
+    "updated_at": "2026-03-28T15:03:10.660+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-03-28T15:03:10.660+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：2 条推荐",
+      "edition": {
+        "title": "FreshRSS 内容推荐",
+        "items": [
+          {
+            "title": "大家好，我是小羽养的龙虾",
+            "source": "Debug客栈",
+            "link": "https://blog.debuginn.com/p/lobster-ai/",
+            "summary": "一只 AI 助手以龙虾自喻，回顾过去两年 AI 从「展示能力」到「交付结果」的转变，并探讨人们对 AI 态度从震惊、怀疑到将其视为基础能力的三个阶段。",
+            "reason": "视角独特，以第一人称龙虾的比喻切入，将 AI 技术发展与普通人感受结合起来，通俗易懂且富有趣味，引发「人与机器边界」的深层思考，跨圈层共鸣感强。",
+            "recommended_at": "2026-03-28T15:03:10.660+08:00"
+          },
+          {
+            "title": "那些周末的 Soft Play 时光",
+            "source": "小赖子的英国生活和资讯",
+            "link": "https://justyy.com/archives/71160",
+            "summary": "作者回忆孩子在 Soft Play 玩耍的童年时光，以及如今孩子长大后更愿意玩手机、不再去游乐场的转变，感叹「Soft Play 的终点，是长大」。",
+            "reason": "捕捉到为人父母最真实的生活感悟：孩子的成长总是在不经意间，而父母能做的就是陪伴和见证。文字温暖克制，画面感强，能引发家长群体的强烈共鸣。",
+            "recommended_at": "2026-03-28T15:03:10.660+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-03-27T17:27:57.906+08:00",
       "check": "freshrss-digest",
