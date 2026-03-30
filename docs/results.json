@@ -2,11 +2,38 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-03-29T15:04:08.405+08:00",
+    "updated_at": "2026-03-30T15:06:03.773+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-03-30T15:06:03.773+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：2 条推荐",
+      "edition": {
+        "title": "FreshRSS 内容推荐",
+        "items": [
+          {
+            "title": "2026.3.29",
+            "source": "JustZht's EchoChamber",
+            "link": "https://www.justzht.com/2026-3-29/",
+            "summary": "记录了一周的生活碎片：Porsche Cayman 终于过了 SMOG test、team reorg 后最后一次聚餐、和朋友在酒吧喝酒听海明威读完围城、以及用 threejs 做了个桌面图钉板的阅读器。",
+            "reason": "一篇真实的个人生活记录，没有刻意修饰，都是日常里实际发生的事：修车、聚餐、喝酒、听歌、写代码——有种「活得很用力但也挺有意思」的感觉，读完会想看看自己的生活碎片。",
+            "recommended_at": "2026-03-30T15:06:03.773+08:00"
+          },
+          {
+            "title": "日本建筑构造技术发展与各工法详解",
+            "source": "EV 的日本生活记录",
+            "link": "https://evjp.life/p/398.html",
+            "summary": "从历史演变到各工法对比，系统梳理了日本建筑的 RC 造、SRC 造、S 造、木造等主流构造方式，并附上在看房时的实用判断标准。",
+            "reason": "对在日本有购房或租房需求的人来说，这篇文章把最容易被忽略但又至关重要的「構造」问题讲得清清楚楚，读完立刻能在看房时用上，实用价值很高。",
+            "recommended_at": "2026-03-30T15:06:03.773+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-03-29T15:04:08.405+08:00",
       "check": "freshrss-digest",
