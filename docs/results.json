@@ -2,11 +2,38 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-04-01T15:04:00.009+08:00",
+    "updated_at": "2026-04-03T15:04:17.193+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-04-03T15:04:17.193+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：2 条推荐",
+      "edition": {
+        "title": "FreshRSS 内容推荐",
+        "items": [
+          {
+            "title": "退休之后我可以做些什么",
+            "source": "So!azy",
+            "link": "https://blog.solazy.me/20260402/",
+            "summary": "作者梳理了退休后可能从事的五种职业方向：驻场歌手、本地生活运营、自己开店、独立开发者、咨询服务，每一种都结合了个人特长与现实可行性。",
+            "reason": "这篇文章把「退休」这个普遍焦虑话题拆解得具体而真诚——不是贩卖焦虑，而是认真盘点自己真正擅长且愿意持续做的事情，很容易引发读者对自身职业路径的共鸣与思考。",
+            "recommended_at": "2026-04-03T15:04:17.193+08:00"
+          },
+          {
+            "title": "德国买iPhone退税全流程实测：19%消费税能退多少？踩坑+避坑全记录",
+            "source": "我不是咕咕鸽",
+            "link": "https://blog.laoda.de/archives/germany-iphone-tax-refund-guide",
+            "summary": "作者实测了在德国购买 iPhone 并申请退税的完整流程，包括苹果官网下单、线下提货、退税柜台盖章、海关检查等环节，并详细记录了踩坑经历与最终到手价格。",
+            "reason": "一篇实打实的出境购物攻略，行文幽默（用 DMW 休假失败被店员用德语表格折腾的段子），信息密度高且可直接复用，特别适合有出国计划或海淘需求的读者。",
+            "recommended_at": "2026-04-03T15:04:17.193+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-04-01T15:04:00.009+08:00",
       "check": "freshrss-digest",
