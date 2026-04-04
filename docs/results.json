@@ -2,11 +2,38 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-04-03T15:04:17.193+08:00",
+    "updated_at": "2026-04-04T15:03:13.590+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-04-04T15:03:13.590+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：2 条推荐",
+      "edition": {
+        "title": "FreshRSS 内容推荐",
+        "items": [
+          {
+            "title": "赠人玫瑰，手有余香",
+            "source": "Shuibaco • 水八口",
+            "link": "https://shuiba.co/helped-a-stranger",
+            "summary": "作者带女儿路过樱花公园，顺手帮一位大姐拍照，三人互动温馨；归家途中感慨主动助人的心情之好，并记录下这份美好。",
+            "reason": "典型的「生活小确幸」，真实、温暖、有画面感，不PUA不鸡汤，读完嘴角会微微上扬——这种随手善意每个人都经历过，但很少有人写出来。",
+            "recommended_at": "2026-04-04T15:03:13.590+08:00"
+          },
+          {
+            "title": "我在日本用 Moppy 一年赚了六万日元的经验分享",
+            "source": "EV 的日本生活记录",
+            "link": "https://evjp.life/p/400.html",
+            "summary": "作者详细记录了日本积分返利网站 Moppy 的使用心得，一年来通过申请信用卡、开证券账户、日常购物等累计赚取近六万日元积分，并附具体操作路径和兑换技巧。",
+            "reason": "实用性强、信息密度高，且天然带有生活融入感——既是省钱技巧，也是了解日本日常文化的窗口，适合在日本生活或有赴日计划的人。",
+            "recommended_at": "2026-04-04T15:03:13.590+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-04-03T15:04:17.193+08:00",
       "check": "freshrss-digest",
