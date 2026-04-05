@@ -2,11 +2,38 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-04-04T15:03:13.590+08:00",
+    "updated_at": "2026-04-05T15:03:48.740+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-04-05T15:03:48.740+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：2 条推荐",
+      "edition": {
+        "title": "FreshRSS 内容推荐",
+        "items": [
+          {
+            "title": "清明流水账 0404",
+            "source": "So!azy",
+            "link": "https://blog.solazy.me/20260404/",
+            "summary": "作者清明假期自驾龙游，从深夜赶路、烧烤宵夜，到鸡子粿、米糊、烤饼、豆腐丸子等当地美食，一路吃到底，文字烟火气十足。",
+            "reason": "假期旅行美食流水账，真实生动，是典型的优质生活分享——没有技术门槛，共鸣感强，读完让人也想出门吃一趟。",
+            "recommended_at": "2026-04-05T15:03:48.740+08:00"
+          },
+          {
+            "title": "习惯了语音输入后，再也不想打字了",
+            "source": "特立独行的异类",
+            "link": "https://demochen.com/posts/20260404/",
+            "summary": "作者深度使用 Typeless 语音输入后，发现AI实时纠错与去语气词让口喷体验远超打字，甚至借此完成了自我表达的复盘与语料积累，认为这在AI时代意义越来越大。",
+            "reason": "结合AI工具与个人成长，既有实操体验又有哲学反思，可读性强，能引发很多人对'打字vs说话'这个日常习惯的重新思考。",
+            "recommended_at": "2026-04-05T15:03:48.740+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-04-04T15:03:13.590+08:00",
       "check": "freshrss-digest",
