@@ -2,11 +2,38 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-04-07T11:36:09.167+08:00",
+    "updated_at": "2026-04-07T15:05:24.310+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-04-07T15:05:24.310+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：2 条推荐",
+      "edition": {
+        "title": "FreshRSS 内容推荐",
+        "items": [
+          {
+            "title": "Apple Watch + AirPods 真实体验分享：那些意外里的小惊喜与小教训",
+            "source": "张洪Heo",
+            "link": "https://blog.zhheo.com/p/vcao5jjb.html",
+            "summary": "作者分享了使用 Apple Watch 和 AirPods 过程中的几个意外经历：AirPods 掉入火锅后奇迹恢复、Watch 长期闲置后\"电池饿死\"的解决方法，以及睡眠评分功能如何潜移默化改善了生活习惯。",
+            "reason": "智能设备不再是冷冰冰的工具，而是和生活细节深度融合的贴心伙伴——这种真实、有温度的体验分享，容易引发共鸣。三个实用经验（设备落水处理、长期闲置保护、数据量化改变行为）也非常贴近日常生活。",
+            "recommended_at": "2026-04-07T15:05:24.310+08:00"
+          },
+          {
+            "title": "抖音热搜爆表：感知幸福——这真的是门技术活？",
+            "source": "TopsTip",
+            "link": "https://topstip.com/douyin-hot-search-sense-happiness-technical-skill/",
+            "summary": "「感知幸福也是一种能力」登上抖音热搜榜首，作者以此切入探讨：为什么在生活压力越来越大的今天，我们反而需要专门去\"学习\"感知幸福？",
+            "reason": "这个话题精准戳中了现代人的情绪痛点——在快节奏里疲于奔命，却忘了问自己到底在追求什么。它既有话题性，又有普遍共鸣感，适合引发讨论和思考。",
+            "recommended_at": "2026-04-07T15:05:24.310+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-04-07T11:36:09.167+08:00",
       "check": "freshrss-digest",
