@@ -5,26 +5,26 @@
     <link>https://zhhbinn.github.io/rss-pick/</link>
     <description>公开版 RSS 内容推荐（增量更新）</description>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Apr 2026 07:05:30 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2026 07:05:13 GMT</lastBuildDate>
     <generator>openclaw</generator>
     
     <item>
-      <title>吃「新荣记」有感</title>
-      <link>https://blog.solazy.me/20260408/</link>
-      <guid isPermaLink="true">https://blog.solazy.me/20260408/</guid>
-      <pubDate>Thu, 09 Apr 2026 07:05:30 GMT</pubDate>
+      <title>吃灰两年的小床，终于被宠幸了</title>
+      <link>https://blog.solazy.me/20260409/</link>
+      <guid isPermaLink="true">https://blog.solazy.me/20260409/</guid>
+      <pubDate>Fri, 10 Apr 2026 07:05:13 GMT</pubDate>
       <description>来源：So!azy
-摘要：作者花700块吃米其林摘星餐厅新荣记，从预订的繁琐SOP、服务细节的「断层」体验，到那道甜到惊人的蜜汁红薯，引发出对高端服务行业「精致草台班子」式管理的深度反思。
-上榜理由：以真实消费体验为切入点，对高端服务业的服务质量提出犀利质疑，视角独特、观点鲜明，极易引发同为消费者的共鸣；文字既幽默又具备洞察力，是难得一见的生活类好文。</description>
+摘要：博主两年前给猫买的小床一直积灰，猫咪从不理会，直到清明节假期后，猫咪突然每天早上主动跳上小床，用眼神叫博主起床，成为专属于他的甜蜜时刻。
+上榜理由：养猫的人大概都有过「买了猫窝猫不理」的共鸣经历，这篇文章把这个日常小事写出了幸福感——不是戏剧性的故事，而是那种「突然被我的猫翻牌子了」的隐秘快乐，读完心情会变好。</description>
     </item>
     <item>
-      <title>天津again</title>
-      <link>https://shuiba.co/tianjin-again</link>
-      <guid isPermaLink="true">https://shuiba.co/tianjin-again</guid>
-      <pubDate>Thu, 09 Apr 2026 07:05:30 GMT</pubDate>
-      <description>来源：Shuibaco • 水八口
-摘要：作者时隔多年重访天津找男友，意外在火车站碰到大学同学，回忆起2010年看驯龙高手、坐天津之眼的往事，十六年后四人皆成眷属，友情延续至今。文字温暖流畅，有「一直好下去」的隽永感。
-上榜理由：一篇轻快的旅行回忆散文，以小见大，通过天津之行串联起十六年的友情与爱情；叙事自然、情感真挚，读来令人嘴角上扬又不免动容，是典型的优质生活分享类内容。</description>
+      <title>Ruby on Rails 之父最新访谈：AI 正在推高顶尖程序员的身价</title>
+      <link>https://tonybai.com/2026/04/10/rails-father-dhh-on-ai-and-programmer-value/</link>
+      <guid isPermaLink="true">https://tonybai.com/2026/04/10/rails-father-dhh-on-ai-and-programmer-value/</guid>
+      <pubDate>Fri, 10 Apr 2026 07:05:13 GMT</pubDate>
+      <description>来源：Tony Bai
+摘要：DHH 公开「自我推翻」：从嘲讽 Copilot 到拥抱 Agent First，并抛出反共识暴论——AI 会让普通程序员贬值，但顶尖程序员的稀缺性和价值反而被放大 10 倍。
+上榜理由：这篇文章不只是讲AI取代程序员，而是提出了一个真正有意思的视角：当AI能写所有代码时，「品味」和「审美」反而成了最稀缺的东西。DHH 分享了他如何用 Agent 双屏工作流实现 90 分钟审完 100 个 PR，非常刷新认知。</description>
     </item>
   </channel>
 </rss>

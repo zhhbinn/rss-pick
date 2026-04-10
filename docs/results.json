@@ -2,11 +2,38 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-04-09T15:05:30.648+08:00",
+    "updated_at": "2026-04-10T15:05:13.666+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-04-10T15:05:13.666+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：2 条推荐",
+      "edition": {
+        "title": "FreshRSS 内容推荐",
+        "items": [
+          {
+            "title": "吃灰两年的小床，终于被宠幸了",
+            "source": "So!azy",
+            "link": "https://blog.solazy.me/20260409/",
+            "summary": "博主两年前给猫买的小床一直积灰，猫咪从不理会，直到清明节假期后，猫咪突然每天早上主动跳上小床，用眼神叫博主起床，成为专属于他的甜蜜时刻。",
+            "reason": "养猫的人大概都有过「买了猫窝猫不理」的共鸣经历，这篇文章把这个日常小事写出了幸福感——不是戏剧性的故事，而是那种「突然被我的猫翻牌子了」的隐秘快乐，读完心情会变好。",
+            "recommended_at": "2026-04-10T15:05:13.666+08:00"
+          },
+          {
+            "title": "Ruby on Rails 之父最新访谈：AI 正在推高顶尖程序员的身价",
+            "source": "Tony Bai",
+            "link": "https://tonybai.com/2026/04/10/rails-father-dhh-on-ai-and-programmer-value/",
+            "summary": "DHH 公开「自我推翻」：从嘲讽 Copilot 到拥抱 Agent First，并抛出反共识暴论——AI 会让普通程序员贬值，但顶尖程序员的稀缺性和价值反而被放大 10 倍。",
+            "reason": "这篇文章不只是讲AI取代程序员，而是提出了一个真正有意思的视角：当AI能写所有代码时，「品味」和「审美」反而成了最稀缺的东西。DHH 分享了他如何用 Agent 双屏工作流实现 90 分钟审完 100 个 PR，非常刷新认知。",
+            "recommended_at": "2026-04-10T15:05:13.666+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-04-09T15:05:30.648+08:00",
       "check": "freshrss-digest",
