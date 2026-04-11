@@ -5,26 +5,26 @@
     <link>https://zhhbinn.github.io/rss-pick/</link>
     <description>公开版 RSS 内容推荐（增量更新）</description>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 10 Apr 2026 07:05:13 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 07:04:24 GMT</lastBuildDate>
     <generator>openclaw</generator>
     
     <item>
-      <title>吃灰两年的小床，终于被宠幸了</title>
-      <link>https://blog.solazy.me/20260409/</link>
-      <guid isPermaLink="true">https://blog.solazy.me/20260409/</guid>
-      <pubDate>Fri, 10 Apr 2026 07:05:13 GMT</pubDate>
-      <description>来源：So!azy
-摘要：博主两年前给猫买的小床一直积灰，猫咪从不理会，直到清明节假期后，猫咪突然每天早上主动跳上小床，用眼神叫博主起床，成为专属于他的甜蜜时刻。
-上榜理由：养猫的人大概都有过「买了猫窝猫不理」的共鸣经历，这篇文章把这个日常小事写出了幸福感——不是戏剧性的故事，而是那种「突然被我的猫翻牌子了」的隐秘快乐，读完心情会变好。</description>
+      <title>「自己不愿意为其他独立开发者的产品付费的心理记录」</title>
+      <link>https://caoyihan.com/2026/04/10/Indie-pay/</link>
+      <guid isPermaLink="true">https://caoyihan.com/2026/04/10/Indie-pay/</guid>
+      <pubDate>Sat, 11 Apr 2026 07:04:24 GMT</pubDate>
+      <description>来源：曹艺瀚的个人网站
+摘要：作者发现自己愿意为实物和 Spotify 付费，却极不愿意为独立开发者的产品付费——即使免费额度够用，49 元的价格也会让他觉得太贵而想找替代品，这背后是实物消费习惯与数字产品付费之间的心理错位。
+上榜理由：这种「付费心理矛盾」极具共鸣感，几乎每个用过优质免费工具的人都体验过类似的内心纠结；作者坦诚自我剖析，用具体例子展现了两种消费观的差异，读来真实又引人反思。</description>
     </item>
     <item>
-      <title>Ruby on Rails 之父最新访谈：AI 正在推高顶尖程序员的身价</title>
-      <link>https://tonybai.com/2026/04/10/rails-father-dhh-on-ai-and-programmer-value/</link>
-      <guid isPermaLink="true">https://tonybai.com/2026/04/10/rails-father-dhh-on-ai-and-programmer-value/</guid>
-      <pubDate>Fri, 10 Apr 2026 07:05:13 GMT</pubDate>
-      <description>来源：Tony Bai
-摘要：DHH 公开「自我推翻」：从嘲讽 Copilot 到拥抱 Agent First，并抛出反共识暴论——AI 会让普通程序员贬值，但顶尖程序员的稀缺性和价值反而被放大 10 倍。
-上榜理由：这篇文章不只是讲AI取代程序员，而是提出了一个真正有意思的视角：当AI能写所有代码时，「品味」和「审美」反而成了最稀缺的东西。DHH 分享了他如何用 Agent 双屏工作流实现 90 分钟审完 100 个 PR，非常刷新认知。</description>
+      <title>关于偶遇的巧合 IV</title>
+      <link>https://blog.solazy.me/20260410/</link>
+      <guid isPermaLink="true">https://blog.solazy.me/20260410/</guid>
+      <pubDate>Sat, 11 Apr 2026 07:04:24 GMT</pubDate>
+      <description>来源：So!azy
+摘要：作者以自己多次在通勤路上偶遇同事为切入点，探讨「偶遇」究竟是纯粹的偶然，还是固定轨迹下必然发生的交集；并由此延伸出一个有趣的反问：或许别人也曾先一步认出了自己，只是出于「不想打扰」的默契而选择了沉默。
+上榜理由：文章从日常细节切入，以细腻的观察和哲思将「偶遇」上升为对城市社交距离的探讨，可读性强且容易引发共鸣；结尾「偶遇是镜子，映照出我们对待社交分寸感的那份默契」这一观点尤为精彩。</description>
     </item>
   </channel>
 </rss>
