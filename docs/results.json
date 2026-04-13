@@ -2,11 +2,38 @@
   "meta": {
     "env": "public",
     "subtitle": "RSS内容推荐 · 公开版（增量更新）",
-    "updated_at": "2026-04-12T15:03:51.111+08:00",
+    "updated_at": "2026-04-13T15:04:26.882+08:00",
     "overall_status": "ok",
     "build": "github-pages"
   },
   "runs": [
+    {
+      "ts": "2026-04-13T15:04:26.882+08:00",
+      "check": "freshrss-digest",
+      "status": "ok",
+      "message": "本次更新：2 条推荐",
+      "edition": {
+        "title": "FreshRSS 内容推荐",
+        "items": [
+          {
+            "title": "关东旅行",
+            "source": "Lynan's Page",
+            "link": "https://lynan.cn/kanto-travel-journal-2026/",
+            "summary": "作者在樱花季走了一遍东京近郊，从新宿御苑到河口湖看富士山，再到镰仓赏夜樱，完整记录了五天行程中的见闻与踩坑体验。",
+            "reason": "图文并茂、细节丰富，涵盖交通、住宿、饮食和景点真实感受，是一篇非常实用的日本赏樱＋富士山旅行参考，旅行爱好者不可错过。",
+            "recommended_at": "2026-04-13T15:04:26.882+08:00"
+          },
+          {
+            "title": "稻草人周刊 Vol.76",
+            "source": "極客死亡計劃",
+            "link": "https://www.geedea.pro/weekly/76/",
+            "summary": "本期包含 Paramore 专辑赏析（Emergency 副歌令人头皮发麻）、手冲咖啡豆推荐（瑰夏与口粮豆）、对社交媒体禁令的深度反思，以及 PvZ 栈位理论的小众趣味解读。",
+            "reason": "内容横跨音乐、咖啡、游戏与社会观察，文风轻松有趣又能引发思考，是典型的「杂食型」生活周刊，共鸣感与可读性俱佳。",
+            "recommended_at": "2026-04-13T15:04:26.882+08:00"
+          }
+        ]
+      }
+    },
     {
       "ts": "2026-04-12T15:03:51.111+08:00",
       "check": "freshrss-digest",
